@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://bujolfmlwwxtr"]
+
+[ext_resource type="Texture2D" uid="uid://wv8qe4o2m8ak" path="res://Assets/Player.png" id="1_xe0hs"]
+[ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
+[ext_resource type="Script" uid="uid://bhdu5wyqrpr3n" path="res://ai_2.gd" id="3_r0du0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
+radius = 96.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cm0pq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
+size = Vector2(541.9999, 3804)
+
+[node name="Player" type="Node2D"]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+
+[node name="MC" type="CharacterBody2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_3ng1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="MC"]
+modulate = Color(0.42352942, 0.4117647, 1, 1)
+position = Vector2(16, 16)
+texture = ExtResource("1_xe0hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MC"]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_ss07l")
+
+[node name="AI2" type="CharacterBody2D" parent="."]
+position = Vector2(-5.999985, 342)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_r0du0")
+
+[node name="Sprite2D" type="Sprite2D" parent="AI2"]
+position = Vector2(16, 16)
+texture = ExtResource("1_xe0hs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AI2"]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_ss07l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.5707964
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Wall" type="Node2D" parent="Map"]
+
+[node name="TextureRect" type="TextureRect" parent="Map/Wall"]
+offset_left = -1050.0001
+offset_top = -1865.9999
+offset_right = -535.8999
+offset_bottom = 1930.9386
+texture = SubResource("CanvasTexture_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Wall"]
+position = Vector2(-801, 30.000034)
+shape = SubResource("RectangleShape2D_fos0i")
+
+[node name="Wall2" type="Node2D" parent="Map"]
+position = Vector2(1386, 95.99994)
+
+[node name="TextureRect" type="TextureRect" parent="Map/Wall2"]
+offset_left = -1050.0001
+offset_top = -1865.9999
+offset_right = -535.8999
+offset_bottom = 1930.9386
+texture = SubResource("CanvasTexture_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Wall2"]
+position = Vector2(-801, 30.000034)
+shape = SubResource("RectangleShape2D_fos0i")
+
+[node name="Wall3" type="Node2D" parent="Map"]
+position = Vector2(841.99994, -3138)
+rotation = 0.5382467
+
+[node name="TextureRect" type="TextureRect" parent="Map/Wall3"]
+offset_left = -1050.0001
+offset_top = -1865.9999
+offset_right = -535.8999
+offset_bottom = 1930.9386
+texture = SubResource("CanvasTexture_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Wall3"]
+position = Vector2(-801, 30.000034)
+shape = SubResource("RectangleShape2D_fos0i")
+
+[node name="Wall4" type="Node2D" parent="Map"]
+position = Vector2(2194, -2841.9995)
+rotation = 0.5382467
+
+[node name="TextureRect" type="TextureRect" parent="Map/Wall4"]
+offset_left = -1050.0001
+offset_top = -1865.9999
+offset_right = -535.8999
+offset_bottom = 1930.9386
+texture = SubResource("CanvasTexture_cm0pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Wall4"]
+position = Vector2(-801, 30.000034)
+shape = SubResource("RectangleShape2D_fos0i")
