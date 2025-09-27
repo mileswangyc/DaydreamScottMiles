@@ -1,21 +1,16 @@
-[gd_scene format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=3 format=3 uid="uid://bujolfmlwwxtr"]
 
-[node name="Main" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://c2ajoocoe8pn1" path="res://icon.svg" id="1_xe0hs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
+radius = 62.008064
+
+[node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_xe0hs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/CharacterBody2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="CharacterBody2D/CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CharacterBody2D/CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/CharacterBody2D/CharacterBody2D"]
+shape = SubResource("CircleShape2D_ss07l")
