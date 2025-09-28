@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://fm2cga3lsafu"]
+
+[ext_resource type="Texture2D" uid="uid://drj1i5gokndov" path="res://Boomerang animation.png" id="1_220d4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gh8t"]
+atlas = ExtResource("1_220d4")
+region = Rect2(0, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_metwk"]
+atlas = ExtResource("1_220d4")
+region = Rect2(72, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umhbh"]
+atlas = ExtResource("1_220d4")
+region = Rect2(144, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qup7t"]
+atlas = ExtResource("1_220d4")
+region = Rect2(216, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dejmx"]
+atlas = ExtResource("1_220d4")
+region = Rect2(288, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axw7k"]
+atlas = ExtResource("1_220d4")
+region = Rect2(360, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ro1e"]
+atlas = ExtResource("1_220d4")
+region = Rect2(432, 0, 72, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oplr4"]
+atlas = ExtResource("1_220d4")
+region = Rect2(504, 0, 72, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_868km"]
+animations = [{
+"frames": [{
+"duration": 1.41,
+"texture": SubResource("AtlasTexture_8gh8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_metwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umhbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qup7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dejmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axw7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ro1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oplr4")
+}],
+"loop": true,
+"name": &"Boomerang",
+"speed": 30.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(362, 116)
+sprite_frames = SubResource("SpriteFrames_868km")
+animation = &"Boomerang"
+frame_progress = 0.95964855
