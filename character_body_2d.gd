@@ -77,3 +77,7 @@ func _on_gun_pickup_body_entered(body: Node2D) -> void:
 		Input.action_press("1")
 		SharedVar.bullet += 5
 		gunlock = true
+
+
+func _on_grenade_pickup_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
