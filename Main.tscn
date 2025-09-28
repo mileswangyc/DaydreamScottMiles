@@ -1,15 +1,22 @@
-[gd_scene load_steps=42 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=54 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Assets/Final Map.png" id="1_cm0pq"]
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
-[ext_resource type="Texture2D" uid="uid://wv8qe4o2m8ak" path="res://Assets/Player.png" id="1_xe0hs"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
 [ext_resource type="PackedScene" uid="uid://cbqd8k2e5cjpv" path="res://car.tscn" id="6_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
+[ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
 [ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
+[ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://qg8x36ggf3ad" path="res://Assets/Punching_New.png" id="9_sc1dx"]
 [ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -98,6 +105,65 @@ size = Vector2(19.249813, 2814.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
 radius = 228.31557
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s68o"]
+atlas = ExtResource("9_sc1dx")
+region = Rect2(0, 0, 144, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r3kk"]
+atlas = ExtResource("9_sc1dx")
+region = Rect2(144, 0, 144, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwo8y"]
+atlas = ExtResource("9_sc1dx")
+region = Rect2(432, 0, 144, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu5ho"]
+atlas = ExtResource("9_sc1dx")
+region = Rect2(720, 0, 144, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjvhd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sc1dx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c2ibq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j4qnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fpfj3")
+}],
+"loop": true,
+"name": &"Normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s68o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r3kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwo8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu5ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu5ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s68o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_trn2v"]
 font_size = 136
@@ -336,7 +402,7 @@ polygon = PackedVector2Array(635.9995, -14160, 1689.9995, -13710, 2431.9995, -13
 position = Vector2(0, -16)
 
 [node name="AI" type="Node2D" parent="."]
-position = Vector2(25.999998, -36)
+position = Vector2(-816.0001, -3350)
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
 
@@ -453,12 +519,8 @@ position = Vector2(248.00005, 1482)
 rotation = 1.5707964
 script = ExtResource("2_3ng1f")
 
-[node name="Sprite2D" type="Sprite2D" parent="MC"]
-modulate = Color(0.42352942, 0.4117647, 1, 1)
-position = Vector2(16, 16)
-texture = ExtResource("1_xe0hs")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MC"]
+position = Vector2(4.000001, 14)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
@@ -467,11 +529,18 @@ shape = SubResource("CircleShape2D_ss07l")
 scale = Vector2(2, 2)
 zoom = Vector2(0.9, 0.9)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
+position = Vector2(6.0000014, 13.999999)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_kjvhd")
+animation = &"Normal"
+
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
+position = Vector2(2, -4)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
@@ -542,12 +611,13 @@ rotation = -1.5707964
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="gren3" type="Label" parent="CanvasLayer"]
-offset_left = 407.0
-offset_top = 909.0
-offset_right = 542.0
-offset_bottom = 1232.0
+offset_left = 412.0
+offset_top = 908.0
+offset_right = 547.0
+offset_bottom = 1231.0
 text = "0"
 label_settings = SubResource("LabelSettings_trn2v")
+script = ExtResource("11_sc1dx")
 
 [node name="gren2" type="Label" parent="CanvasLayer/gren3"]
 layout_mode = 0
@@ -570,6 +640,7 @@ offset_right = 821.0
 offset_bottom = 1227.0
 text = "0"
 label_settings = SubResource("LabelSettings_trn2v")
+script = ExtResource("13_kjvhd")
 
 [node name="boom2" type="Sprite2D" parent="CanvasLayer/boom3"]
 position = Vector2(-55.99994, 102)
@@ -593,6 +664,7 @@ offset_right = 295.0
 offset_bottom = 1225.0
 text = "0"
 label_settings = SubResource("LabelSettings_trn2v")
+script = ExtResource("15_5tuhn")
 
 [node name="bull" type="Sprite2D" parent="CanvasLayer/bull2"]
 position = Vector2(-76, 103)
@@ -609,68 +681,68 @@ label_settings = SubResource("LabelSettings_03owx")
 
 [node name="Pickups" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Pickups"]
-position = Vector2(321.99997, -598)
+[node name="GunPickup" type="Area2D" parent="Pickups"]
+position = Vector2(307.99997, -566)
 script = ExtResource("10_wkp8b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/GunPickup"]
 modulate = Color(0, 0, 0, 1)
 rotation = -1.5707964
 texture = ExtResource("7_lgr22")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/GunPickup"]
 position = Vector2(-349.99997, 630)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
-[node name="Area2D3" type="Area2D" parent="Pickups"]
+[node name="GrenadePickup" type="Area2D" parent="Pickups"]
 position = Vector2(1095.9999, -4060)
 script = ExtResource("10_wkp8b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D3"]
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/GrenadePickup"]
 modulate = Color(0, 0, 0, 1)
 rotation = -1.5707964
 texture = ExtResource("8_03owx")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/GrenadePickup"]
 position = Vector2(-385.99997, 620)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
-[node name="Area2D4" type="Area2D" parent="Pickups"]
+[node name="GrenadePickup2" type="Area2D" parent="Pickups"]
 position = Vector2(2700, -3156)
 script = ExtResource("10_wkp8b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D4"]
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/GrenadePickup2"]
 modulate = Color(0, 0, 0, 1)
 rotation = -1.5707964
 texture = ExtResource("8_03owx")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/GrenadePickup2"]
 position = Vector2(-375.99997, 622)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
-[node name="Area2D5" type="Area2D" parent="Pickups"]
+[node name="BoomPickup" type="Area2D" parent="Pickups"]
 position = Vector2(1489.9999, -6656)
 script = ExtResource("10_wkp8b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D5"]
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/BoomPickup"]
 modulate = Color(0, 0, 0, 1)
 rotation = -1.5707964
 texture = ExtResource("9_03owx")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D5"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/BoomPickup"]
 position = Vector2(-351.99997, 634)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
-[node name="Area2D6" type="Area2D" parent="Pickups"]
+[node name="BoomPickup2" type="Area2D" parent="Pickups"]
 position = Vector2(3865.9998, -5900)
 script = ExtResource("10_wkp8b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D6"]
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/BoomPickup2"]
 modulate = Color(0, 0, 0, 1)
 rotation = -1.5707964
 texture = ExtResource("9_03owx")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D6"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/BoomPickup2"]
 position = Vector2(-377.99997, 676)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
@@ -682,3 +754,4 @@ polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -8
 [connection signal="body_entered" from="Areas/Area2D3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D4" to="." method="_on_area_2d_4_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D5" to="." method="_on_area_2d_5_body_entered"]
+[connection signal="body_entered" from="Pickups/GunPickup" to="MC" method="_on_gun_pickup_body_entered"]

@@ -26,22 +26,24 @@ func _physics_process(delta: float) -> void:
 		$"../CanvasLayer/bull2".modulate = Color(0, 0, 0)
 		$"../CanvasLayer/boom3".modulate = Color(1, 1, 1)
 		$"../CanvasLayer/gren3".modulate = Color(1, 1, 1)
+		$AnimatedSprite2D.play("Normal")
+		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.frame=1
 	if Input.is_action_just_pressed("2") and grenadelock == true:
 		choice = 2
 		$"../CanvasLayer/gren3".modulate = Color(0, 0, 0)
 		$"../CanvasLayer/boom3".modulate = Color(1, 1, 1)
 		$"../CanvasLayer/bull2".modulate = Color(1, 1, 1)
-		
+		$AnimatedSprite2D.animation.play("Normal")
+		$AnimatedSprite2D.frame=2
 	if Input.is_action_just_pressed("3") and boomlock == true:
-		choice = 1
+		choice = 3
 		$"../CanvasLayer/boom3".modulate = Color(0, 0, 0)
 		$"../CanvasLayer/bull2".modulate = Color(1, 1, 1)
 		$"../CanvasLayer/gren3".modulate = Color(1, 1, 1)
-		
-	if Input.is_action_just_pressed("2") and grenadelock == true:
-		choice = 2
-	if Input.is_action_just_pressed("3") and boomlock == true:
-		choice = 3
+		$AnimatedSprite2D.animation.play("Normal")
+		$AnimatedSprite2D.frame=3
+
 	
 	if Input.is_action_just_pressed("shoot") and choice == 1:
 		laser.emit(position, player_direction)
@@ -65,3 +67,11 @@ func _physics_process(delta: float) -> void:
 		$CollisionShape2D.disabled = true
 		
 	move_and_slide()
+
+
+func _on_gun_pickup_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$"../Pickups/GunPickup".queue_free()
+		Input.action_press("1")
+		SharedVar.bullet += 5
+		gunlock = true
