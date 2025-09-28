@@ -5,9 +5,9 @@ signal grenade(pos, direction)
 signal boom(pos, direction)
 
 var speed= 400.0 
-var can_laser = true
+var can_laser = false
 var can_grenade = false
-var can_boom
+var can_boom = true
 
 func _physics_process(delta: float) -> void:
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")

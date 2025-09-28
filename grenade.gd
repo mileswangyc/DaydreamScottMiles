@@ -15,7 +15,7 @@ func _process(delta):
 
 func _on_timer_timeout() -> void:
 	$Area2D.explode()
-	print("timerTriggered")
+
 	
 #func _on_body_entered(body):
 	#if explode == true:

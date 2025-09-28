@@ -1,95 +1,94 @@
 [gd_scene load_steps=13 format=3 uid="uid://dh6ygotqri3op"]
 
 [ext_resource type="Script" uid="uid://bbxyc6mlpr4ea" path="res://boom.gd" id="1_37ygf"]
-[ext_resource type="Texture2D" uid="uid://drj1i5gokndov" path="res://Boomerang animation.png" id="1_crcy4"]
+[ext_resource type="Texture2D" uid="uid://drj1i5gokndov" path="res://Assets/Boomerang animation.png" id="2_37ygf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8gh8t"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvxa8"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(0, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_metwk"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubxla"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(72, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_umhbh"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpm1p"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(144, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qup7t"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_04q81"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(216, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dejmx"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdurs"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(288, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_axw7k"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvkis"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(360, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ro1e"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3suhf"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(432, 0, 72, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oplr4"]
-atlas = ExtResource("1_crcy4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtuo6"]
+atlas = ExtResource("2_37ygf")
 region = Rect2(504, 0, 72, 180)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_37ygf"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vr171"]
 animations = [{
 "frames": [{
-"duration": 1.41,
-"texture": SubResource("AtlasTexture_8gh8t")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvxa8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_metwk")
+"texture": SubResource("AtlasTexture_ubxla")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_umhbh")
+"texture": SubResource("AtlasTexture_tpm1p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qup7t")
+"texture": SubResource("AtlasTexture_04q81")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dejmx")
+"texture": SubResource("AtlasTexture_xdurs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_axw7k")
+"texture": SubResource("AtlasTexture_hvkis")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ro1e")
+"texture": SubResource("AtlasTexture_3suhf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oplr4")
+"texture": SubResource("AtlasTexture_jtuo6")
 }],
 "loop": true,
-"name": &"Boomerang",
-"speed": 30.0
-}, {
-"frames": [],
-"loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crcy4"]
 radius = 34.132095
 
 [node name="boom" type="Area2D"]
+scale = Vector2(1.705, 1.705)
 script = ExtResource("1_37ygf")
-speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 19.305)
-sprite_frames = SubResource("SpriteFrames_37ygf")
-animation = &"Boomerang"
+position = Vector2(0, 19.015)
+sprite_frames = SubResource("SpriteFrames_vr171")
+autoplay = "default"
+frame_progress = 0.4684538
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_crcy4")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="Timer2" type="Timer" parent="."]
+one_shot = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

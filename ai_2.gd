@@ -39,5 +39,4 @@ func pick_new_direction():
 	target_direction = Vector2(1, randf_range(y1, y2)).normalized()
 	timer = randf_range(0.5,1.5)
 func hitenemy():
-	print("Enemy was hit!")
 	queue_free()

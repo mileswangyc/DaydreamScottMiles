@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://bujolfmlwwxtr"]
 
-[ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Final Map.png" id="1_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Assets/Final Map.png" id="1_cm0pq"]
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Texture2D" uid="uid://wv8qe4o2m8ak" path="res://Assets/Player.png" id="1_xe0hs"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -108,7 +108,7 @@ rotation = -1.5707964
 scale = Vector2(5.535899, 5.738279)
 texture = ExtResource("1_cm0pq")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Map"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Map" groups=["walls"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/StaticBody2D"]
 position = Vector2(-72, 793.25)
