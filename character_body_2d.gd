@@ -122,3 +122,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	cool = true
+
+
+func _on_car_pickup_body_entered(body: Node2D) -> void:
+	Input.action_press("switch_sprite")

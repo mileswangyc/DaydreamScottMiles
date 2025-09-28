@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://drpe01xykh50v"]
+
+[ext_resource type="Texture2D" uid="uid://0snbs07ldhls" path="res://Assets/Vehicle_Moving_Animation.png" id="1_p1vij"]
+
+[resource]
+atlas = ExtResource("1_p1vij")
+region = Rect2(0, 0, 310, 708)

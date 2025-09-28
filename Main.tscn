@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=61 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
 [ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
+[ext_resource type="Texture2D" uid="uid://drpe01xykh50v" path="res://Assets/car.tres" id="19_2gh4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -1393,7 +1394,7 @@ polygon = PackedVector2Array(-166.00049, -10276, -500.0005, -13208, 197.99951, -
 polygon = PackedVector2Array(631.99976, -4170, -792, -5172, -1702.0005, -6618, -1834.0005, -8528, -1520.0005, -8508, -1420.0005, -6850, -550, -5404, 713.99976, -4556)
 
 [node name="Car" parent="." instance=ExtResource("6_3dxm6")]
-position = Vector2(8000, 0)
+position = Vector2(200000, 0)
 rotation = -1.5707964
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -1493,6 +1494,17 @@ texture = ExtResource("18_5tuhn")
 
 [node name="Pickups" type="Node2D" parent="."]
 
+[node name="CarPickup" type="Area2D" parent="Pickups"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/CarPickup"]
+position = Vector2(3079.9995, -11896)
+rotation = -1.5707964
+scale = Vector2(3, 3)
+texture = ExtResource("19_2gh4u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/CarPickup"]
+polygon = PackedVector2Array(2675.9995, -11706, 2951.9995, -11692, 2951.9995, -12082, 2687.9995, -12170, 2669.9995, -11762)
+
 [node name="GunPickup" type="Area2D" parent="Pickups"]
 position = Vector2(733.9999, -2002)
 script = ExtResource("10_wkp8b")
@@ -1569,6 +1581,7 @@ polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -8
 [connection signal="body_entered" from="Areas/Area2D4" to="." method="_on_area_2d_4_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D5" to="." method="_on_area_2d_5_body_entered"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Pickups/CarPickup" to="MC" method="_on_car_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/GunPickup" to="MC" method="_on_gun_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/GrenadePickup" to="MC" method="_on_grenade_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/GrenadePickup2" to="MC" method="_on_grenade_pickup_body_entered"]
