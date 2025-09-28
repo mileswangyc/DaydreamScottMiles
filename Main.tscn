@@ -1,10 +1,12 @@
-[gd_scene load_steps=35 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=40 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Assets/Final Map.png" id="1_cm0pq"]
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Texture2D" uid="uid://wv8qe4o2m8ak" path="res://Assets/Player.png" id="1_xe0hs"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://0snbs07ldhls" path="res://Assets/Vehicle_Moving_Animation.png" id="5_lgr22"]
+[ext_resource type="Script" uid="uid://53nrjthk2n41" path="res://animated_sprite_2d.gd" id="6_trn2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -93,6 +95,28 @@ size = Vector2(19.249813, 2814.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
 radius = 296.9714
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1on7t"]
+atlas = ExtResource("5_lgr22")
+region = Rect2(0, 0, 310, 708)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6xor"]
+atlas = ExtResource("5_lgr22")
+region = Rect2(310, 0, 310, 708)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03owx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1on7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6xor")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Root" type="Node2D"]
 position = Vector2(-5874, -1922)
@@ -326,6 +350,10 @@ shape = SubResource("CircleShape2D_ss07l")
 [node name="Camera2D" type="Camera2D" parent="MC"]
 scale = Vector2(2, 2)
 zoom = Vector2(0.9, 0.9)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
+sprite_frames = SubResource("SpriteFrames_03owx")
+script = ExtResource("6_trn2v")
 
 [node name="Areas" type="Node2D" parent="."]
 

@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://06n35iloxkhb"]
+[gd_scene load_steps=6 format=3 uid="uid://06n35iloxkhb"]
 
-[ext_resource type="Texture2D" path="res://Assets/Vehicle_Moving_Animation.png" id="1_1on7t"]
+[ext_resource type="Texture2D" uid="uid://0snbs07ldhls" path="res://Assets/Vehicle_Moving_Animation.png" id="1_1on7t"]
+[ext_resource type="Script" uid="uid://53nrjthk2n41" path="res://animated_sprite_2d.gd" id="2_j6xor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1on7t"]
+atlas = ExtResource("1_1on7t")
+region = Rect2(0, 0, 310, 708)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6xor"]
+atlas = ExtResource("1_1on7t")
+region = Rect2(310, 0, 310, 708)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j6xor"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_1on7t")
+"texture": SubResource("AtlasTexture_1on7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6xor")
 }],
 "loop": true,
 "name": &"default",
@@ -15,5 +27,8 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Vehicle_Animated" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j6xor")
+frame = 1
+frame_progress = 0.7903494
+script = ExtResource("2_j6xor")
