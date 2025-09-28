@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4gh1c51edis6"
-path="res://.godot/imported/Vehicle.png-0d629a5578985d160c416bf4acd035b6.ctex"
+uid="uid://b7t7h1ndrqspi"
+path="res://.godot/imported/Player_Grenade.png-dd7595179641356c3485afd280575d5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vehicle.png"
-dest_files=["res://.godot/imported/Vehicle.png-0d629a5578985d160c416bf4acd035b6.ctex"]
+source_file="res://Assets/Player_Grenade.png"
+dest_files=["res://.godot/imported/Player_Grenade.png-dd7595179641356c3485afd280575d5e.ctex"]
 
 [params]
 
