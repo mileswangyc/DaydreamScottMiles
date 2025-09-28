@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r07me7e7gbgg"
-path="res://.godot/imported/map.png-9eea34967fae34f4388f4a32a16da936.ctex"
+uid="uid://4gh1c51edis6"
+path="res://.godot/imported/Vehicle.png-0d629a5578985d160c416bf4acd035b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map.png"
-dest_files=["res://.godot/imported/map.png-9eea34967fae34f4388f4a32a16da936.ctex"]
+source_file="res://Vehicle.png"
+dest_files=["res://.godot/imported/Vehicle.png-0d629a5578985d160c416bf4acd035b6.ctex"]
 
 [params]
 
