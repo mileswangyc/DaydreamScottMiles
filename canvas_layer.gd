@@ -3,8 +3,12 @@ extends CanvasLayer
 func _ready() -> void:
 	goagain()
 
+func _process(delta: float) -> void:
+	if int($"TV's Left".text) < 0:
+		$Lose.visible = true
+
 func goagain():
-	$Timer.start(randf_range(0.5,0.9))
+	$Timer.start(randf_range(0.35,0.6))
 	 
 
 func _on_timer_timeout() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=64 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -18,8 +18,10 @@
 [ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
 [ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
 [ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://drpe01xykh50v" path="res://Assets/car.tres" id="19_2gh4u"]
+[ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -442,7 +444,7 @@ position = Vector2(19.999996, -150)
 position = Vector2(220.00009, 2360)
 
 [node name="AI3" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(422, 510)
+position = Vector2(414, 386)
 
 [node name="AI5" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(195.99998, 238)
@@ -451,7 +453,7 @@ position = Vector2(195.99998, 238)
 position = Vector2(488, -22.000015)
 
 [node name="AI7" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(304.00006, 1274)
+position = Vector2(280.00006, 1210)
 
 [node name="AI8" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(102, -30)
@@ -463,7 +465,7 @@ position = Vector2(276, -276)
 position = Vector2(168.00005, 604)
 
 [node name="AI12" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(454.00006, 1034)
+position = Vector2(104.00006, 880)
 
 [node name="AI21" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(508.00006, 746)
@@ -487,7 +489,7 @@ position = Vector2(845.9997, -5696)
 position = Vector2(318.00003, 1662)
 
 [node name="AI3" parent="AI4" instance=ExtResource("5_fos0i")]
-position = Vector2(16.000061, 2080)
+position = Vector2(-69.99994, 2028)
 
 [node name="AI5" parent="AI4" instance=ExtResource("5_fos0i")]
 position = Vector2(390.00003, 1380)
@@ -496,7 +498,10 @@ position = Vector2(390.00003, 1380)
 position = Vector2(112.00006, 1508)
 
 [node name="AI7" parent="AI4" instance=ExtResource("5_fos0i")]
-position = Vector2(292.0001, 1980)
+position = Vector2(372.0001, 1946)
+
+[node name="AI8" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(-27.999908, 1758)
 
 [node name="AI5" type="Node2D" parent="."]
 position = Vector2(887.99963, -7016)
@@ -1252,22 +1257,39 @@ position = Vector2(417.1572, 2887.3635)
 [node name="AI3" type="Node2D" parent="."]
 position = Vector2(19.999996, -150)
 
-[node name="AI" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(220.00009, 2360)
-
 [node name="AI2" parent="AI3" instance=ExtResource("5_fos0i")]
 position = Vector2(677.9999, -2454)
 
 [node name="AI3" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(841.9999, -3032)
+position = Vector2(819.9999, -3130)
+rotation = 2.5538197
+
+[node name="AI18" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(1185.9999, -3220)
+rotation = 2.5538197
+
+[node name="AI22" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(951.9999, -3352)
 rotation = 2.5538197
 
 [node name="AI12" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(923.9999, -2750)
+position = Vector2(797.9999, -2812)
+rotation = 2.5538197
+
+[node name="AI23" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(1145.9999, -2818)
+rotation = 2.5538197
+
+[node name="AI24" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(1145.9999, -2818)
 rotation = 2.5538197
 
 [node name="AI14" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(911.9999, -2248)
+position = Vector2(889.9999, -2254)
+rotation = 2.5538197
+
+[node name="AI25" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(1123.9999, -2128)
 rotation = 2.5538197
 
 [node name="AI15" parent="AI3" instance=ExtResource("5_fos0i")]
@@ -1275,11 +1297,11 @@ position = Vector2(1169.9999, -2492)
 rotation = 2.5538197
 
 [node name="AI21" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(1169.9999, -2492)
+position = Vector2(901.9999, -2578)
 rotation = -0.47926855
 
 [node name="AI4" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(104.000015, 876)
+position = Vector2(464, 992)
 
 [node name="AI5" parent="AI3" instance=ExtResource("5_fos0i")]
 position = Vector2(461.99994, -568)
@@ -1319,9 +1341,6 @@ position = Vector2(484.00006, 1472)
 [node name="AI17" parent="AI3" instance=ExtResource("5_fos0i")]
 position = Vector2(474.00006, 2194)
 
-[node name="AI18" parent="AI3" instance=ExtResource("5_fos0i")]
-position = Vector2(474.00006, 2194)
-
 [node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
 rotation = 1.5707964
@@ -1347,13 +1366,7 @@ animation = &"Normal"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
-position = Vector2(6.567871, 118)
-scale = Vector2(2.0372076, 2)
-sprite_frames = SubResource("SpriteFrames_hhcpw")
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="MC"]
-modulate = Color(0.61960787, 0.53333336, 1, 1)
-position = Vector2(6.567871, 118)
+position = Vector2(6.0004883, 118)
 scale = Vector2(2.0372076, 2)
 sprite_frames = SubResource("SpriteFrames_hhcpw")
 
@@ -1383,11 +1396,11 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(26, 48.000023)
+position = Vector2(-14, 56.000023)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(-8, 186)
+position = Vector2(8, 122)
 polygon = PackedVector2Array(570, -2552, 1200, -2758, 1312, -2784, 1401.9998, -4140, 1405.9998, -5568, 793.99976, -5798, 741.99976, -4534, 667.99976, -4172)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
@@ -1546,17 +1559,24 @@ text = "100"
 label_settings = SubResource("LabelSettings_kjvhd")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 225.0
-offset_top = -6.0
-offset_right = 405.0
-offset_bottom = 126.0
-text = "Left"
+offset_left = 15.0
+offset_top = -11.0
+offset_right = 404.0
+offset_bottom = 121.0
+text = "TV's Left"
 label_settings = SubResource("LabelSettings_2gh4u")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(121.99999, 69)
-scale = Vector2(0.435, 0.435)
-texture = ExtResource("18_5tuhn")
+[node name="Win" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(958.17255, 528.59094)
+scale = Vector2(1.2923687, 1.4216188)
+texture = ExtResource("18_3b0ty")
+
+[node name="Lose" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(955.5, 526)
+scale = Vector2(1.0206704, 1.1409091)
+texture = ExtResource("19_bg4s2")
 
 [node name="Pickups" type="Node2D" parent="."]
 
@@ -1639,6 +1659,20 @@ polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -8
 
 [node name="Node2D" type="Node2D" parent="Pickups"]
 
+[node name="TVPickup" type="Area2D" parent="Pickups" groups=["win"]]
+position = Vector2(3417.9993, -18006)
+script = ExtResource("10_wkp8b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/TVPickup"]
+position = Vector2(2.6226832e-07, 6)
+polygon = PackedVector2Array(-307.99997, 420, 138.00003, 426, 129.99997, -466, -358.00003, -466)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/TVPickup"]
+position = Vector2(-86, 1.9073486e-06)
+rotation = -1.5707964
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("18_5tuhn")
+
 [node name="Label" type="Label" parent="."]
 offset_left = -397.99988
 offset_top = 2524.0002
@@ -1647,6 +1681,16 @@ offset_bottom = 2801.0002
 rotation = -1.572604
 text = "Black Friday is brutal, and you are the predator. 
 Sacrifices must be made."
+label_settings = SubResource("LabelSettings_devvj")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 780.0001
+offset_top = 2476.0002
+offset_right = 3633.0
+offset_bottom = 2753.0002
+rotation = -1.572604
+text = "Left Click to Attack
+WASD to Move"
 label_settings = SubResource("LabelSettings_devvj")
 
 [connection signal="boom" from="MC" to="." method="_on_mc_boom"]
@@ -1666,3 +1710,4 @@ label_settings = SubResource("LabelSettings_devvj")
 [connection signal="body_entered" from="Pickups/GrenadePickup2" to="MC" method="_on_grenade_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/BoomPickup" to="MC" method="_on_boom_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/BoomPickup2" to="MC" method="_on_boom_pickup_body_entered"]
+[connection signal="body_entered" from="Pickups/TVPickup" to="MC" method="_on_tv_pickup_body_entered"]

@@ -91,6 +91,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_gun_pickup_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		
 		$"../Pickups/GunPickup".queue_free()
 		Input.action_press("1")
 		SharedVar.bullet += 5
@@ -127,3 +128,9 @@ func _on_timer_timeout() -> void:
 func _on_car_pickup_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Input.action_press("Test")
+
+
+func _on_tv_pickup_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$"../CanvasLayer/Win".visible = true
+		
