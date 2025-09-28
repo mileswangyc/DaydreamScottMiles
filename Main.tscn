@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=42 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Assets/Final Map.png" id="1_cm0pq"]
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="PackedScene" uid="uid://cbqd8k2e5cjpv" path="res://car.tscn" id="6_3dxm6"]
+[ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
+[ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
+[ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
+[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -94,6 +98,12 @@ size = Vector2(19.249813, 2814.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
 radius = 228.31557
+
+[sub_resource type="LabelSettings" id="LabelSettings_trn2v"]
+font_size = 136
+
+[sub_resource type="LabelSettings" id="LabelSettings_03owx"]
+font_size = 45
 
 [node name="Root" type="Node2D"]
 position = Vector2(-5874, -1922)
@@ -329,75 +339,114 @@ position = Vector2(0, -16)
 position = Vector2(25.999998, -36)
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
-scale = Vector2(1, 1)
 
 [node name="AI2" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(432, 830)
-scale = Vector2(1, 1)
 
 [node name="AI3" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(422, 510)
-scale = Vector2(1, 1)
 
 [node name="AI4" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(168, 520)
-scale = Vector2(1, 1)
 
 [node name="AI5" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(195.99998, 238)
-scale = Vector2(1, 1)
 
 [node name="AI6" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(478, 251.99998)
-scale = Vector2(1, 1)
 
 [node name="AI7" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(356, 31.999989)
-scale = Vector2(1, 1)
 
 [node name="AI8" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(102, -30)
-scale = Vector2(1, 1)
 
 [node name="AI9" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(276, -276)
-scale = Vector2(1, 1)
 
 [node name="AI10" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(474, -196)
-scale = Vector2(1, 1)
 
 [node name="AI11" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(210.00006, 902)
-scale = Vector2(1, 1)
 
 [node name="AI12" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(450.00006, 1086)
-scale = Vector2(1, 1)
 
 [node name="AI13" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(484.00006, 1472)
-scale = Vector2(1, 1)
 
 [node name="AI14" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(446.0001, 1916)
-scale = Vector2(1, 1)
 
 [node name="AI15" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(68.00009, 2142)
-scale = Vector2(1, 1)
 
 [node name="AI16" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(96.00008, 1888)
-scale = Vector2(1, 1)
 
 [node name="AI17" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(474.00006, 2194)
-scale = Vector2(1, 1)
 
 [node name="AI18" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(162.00003, 1250)
-scale = Vector2(1, 1)
+position = Vector2(474.00006, 2194)
+
+[node name="AI2" type="Node2D" parent="."]
+position = Vector2(603.9999, -2946)
+rotation = 0.14138249
+
+[node name="AI" parent="AI2" instance=ExtResource("5_fos0i")]
+
+[node name="AI2" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(432, 830)
+
+[node name="AI3" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(422, 510)
+
+[node name="AI4" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(168, 520)
+
+[node name="AI5" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(195.99998, 238)
+
+[node name="AI6" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(478, 251.99998)
+
+[node name="AI7" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(356, 31.999989)
+
+[node name="AI8" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(102, -30)
+
+[node name="AI9" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(276, -276)
+
+[node name="AI10" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(474, -196)
+
+[node name="AI11" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(210.00006, 902)
+
+[node name="AI12" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(450.00006, 1086)
+
+[node name="AI13" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(484.00006, 1472)
+
+[node name="AI14" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(446.0001, 1916)
+
+[node name="AI15" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(68.00009, 2142)
+
+[node name="AI16" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(96.00008, 1888)
+
+[node name="AI17" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(474.00006, 2194)
+
+[node name="AI18" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(474.00006, 2194)
 
 [node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
@@ -489,6 +538,141 @@ polygon = PackedVector2Array(631.99976, -4170, -792, -5172, -1702.0005, -6618, -
 [node name="Car" parent="." instance=ExtResource("6_3dxm6")]
 position = Vector2(8000, 0)
 rotation = -1.5707964
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gren3" type="Label" parent="CanvasLayer"]
+offset_left = 407.0
+offset_top = 909.0
+offset_right = 542.0
+offset_bottom = 1232.0
+text = "0"
+label_settings = SubResource("LabelSettings_trn2v")
+
+[node name="gren2" type="Label" parent="CanvasLayer/gren3"]
+layout_mode = 0
+offset_left = -107.0
+offset_top = -26.0
+offset_right = 28.0
+offset_bottom = 297.0
+text = "2 Key"
+label_settings = SubResource("LabelSettings_03owx")
+
+[node name="gren" type="Sprite2D" parent="CanvasLayer/gren3"]
+position = Vector2(-59, 112)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("8_03owx")
+
+[node name="boom3" type="Label" parent="CanvasLayer"]
+offset_left = 686.0
+offset_top = 904.0
+offset_right = 821.0
+offset_bottom = 1227.0
+text = "0"
+label_settings = SubResource("LabelSettings_trn2v")
+
+[node name="boom2" type="Sprite2D" parent="CanvasLayer/boom3"]
+position = Vector2(-55.99994, 102)
+rotation = -3.1415925
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_03owx")
+
+[node name="boom" type="Label" parent="CanvasLayer/boom3"]
+layout_mode = 0
+offset_left = -108.0
+offset_top = -19.0
+offset_right = 27.0
+offset_bottom = 304.0
+text = "3 Key"
+label_settings = SubResource("LabelSettings_03owx")
+
+[node name="bull2" type="Label" parent="CanvasLayer"]
+offset_left = 160.0
+offset_top = 902.0
+offset_right = 295.0
+offset_bottom = 1225.0
+text = "0"
+label_settings = SubResource("LabelSettings_trn2v")
+
+[node name="bull" type="Sprite2D" parent="CanvasLayer/bull2"]
+position = Vector2(-76, 103)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("7_lgr22")
+
+[node name="bull3" type="Label" parent="CanvasLayer/bull2"]
+layout_mode = 0
+offset_left = -135.0
+offset_top = -17.0
+offset_bottom = 306.0
+text = "1 Key"
+label_settings = SubResource("LabelSettings_03owx")
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Pickups"]
+position = Vector2(321.99997, -598)
+script = ExtResource("10_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D"]
+modulate = Color(0, 0, 0, 1)
+rotation = -1.5707964
+texture = ExtResource("7_lgr22")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D"]
+position = Vector2(-349.99997, 630)
+polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
+
+[node name="Area2D3" type="Area2D" parent="Pickups"]
+position = Vector2(1095.9999, -4060)
+script = ExtResource("10_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D3"]
+modulate = Color(0, 0, 0, 1)
+rotation = -1.5707964
+texture = ExtResource("8_03owx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D3"]
+position = Vector2(-385.99997, 620)
+polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
+
+[node name="Area2D4" type="Area2D" parent="Pickups"]
+position = Vector2(2700, -3156)
+script = ExtResource("10_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D4"]
+modulate = Color(0, 0, 0, 1)
+rotation = -1.5707964
+texture = ExtResource("8_03owx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D4"]
+position = Vector2(-375.99997, 622)
+polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
+
+[node name="Area2D5" type="Area2D" parent="Pickups"]
+position = Vector2(1489.9999, -6656)
+script = ExtResource("10_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D5"]
+modulate = Color(0, 0, 0, 1)
+rotation = -1.5707964
+texture = ExtResource("9_03owx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D5"]
+position = Vector2(-351.99997, 634)
+polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
+
+[node name="Area2D6" type="Area2D" parent="Pickups"]
+position = Vector2(3865.9998, -5900)
+script = ExtResource("10_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pickups/Area2D6"]
+modulate = Color(0, 0, 0, 1)
+rotation = -1.5707964
+texture = ExtResource("9_03owx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/Area2D6"]
+position = Vector2(-377.99997, 676)
+polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
 
 [connection signal="boom" from="MC" to="." method="_on_mc_boom"]
 [connection signal="grenade" from="MC" to="." method="_on_mc_grenade"]
