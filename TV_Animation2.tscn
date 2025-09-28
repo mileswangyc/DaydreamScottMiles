@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://2bovot6hatk7"]
+
+[ext_resource type="Texture2D" path="res://Assets/TV_Aligned.png" id="1_q5s03"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkb0h"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(0, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ganp"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(356, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe45f"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(712, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iesha"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(1068, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqfme"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(1424, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc7k0"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(1780, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8eew"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(2136, 0, 341, 361)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg1qj"]
+atlas = ExtResource("1_q5s03")
+region = Rect2(2492, 0, 341, 361)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtyt6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkb0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ganp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe45f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iesha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqfme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc7k0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8eew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg1qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ganp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ganp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rtyt6")
+autoplay = "default"
+frame_progress = 0.17219974
