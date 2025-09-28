@@ -71,7 +71,7 @@ animations = [{
 radius = 34.132095
 
 [node name="boom" type="Area2D"]
-scale = Vector2(1.705, 1.705)
+scale = Vector2(3.535, 3.535)
 script = ExtResource("1_37ygf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

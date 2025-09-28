@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: int = 1500
+@export var speed: int = 2000
 var fixeddirection
 signal hitenemy
 var type = 1
