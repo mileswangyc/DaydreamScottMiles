@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 		$Area2D.monitoring = true
 		await get_tree().physics_frame 
 		$Area2D.monitoring = false
-		$Timer.start(0.5)
+		$Timer.start(0.8)
 		
 		
 	if Input.is_action_just_pressed("shoot") and choice == 1:
@@ -125,4 +125,5 @@ func _on_timer_timeout() -> void:
 
 
 func _on_car_pickup_body_entered(body: Node2D) -> void:
-	Input.action_press("switch_sprite")
+	if body.is_in_group("player"):
+		Input.action_press("Test")

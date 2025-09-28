@@ -440,9 +440,6 @@ position = Vector2(220.00009, 2360)
 [node name="AI3" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(422, 510)
 
-[node name="AI4" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(70.00003, 1210)
-
 [node name="AI5" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(195.99998, 238)
 
@@ -854,6 +851,9 @@ position = Vector2(16.000061, 2080)
 [node name="AI4" parent="AI16" instance=ExtResource("5_fos0i")]
 position = Vector2(92.00005, 1770)
 
+[node name="AI9" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
 [node name="AI5" parent="AI16" instance=ExtResource("5_fos0i")]
 position = Vector2(390.00003, 1380)
 
@@ -865,6 +865,28 @@ position = Vector2(292.0001, 1980)
 
 [node name="AI8" parent="AI16" instance=ExtResource("5_fos0i")]
 position = Vector2(182.00006, 1220)
+
+[node name="AI10" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(-409.29474, 761.7993)
+
+[node name="AI11" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(-162.40686, 653.89905)
+
+[node name="AI12" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(163.25494, 760.0892)
+rotation = 1.6537338
+
+[node name="AI13" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(-699.51654, 269.23126)
+rotation = 1.6537338
+
+[node name="AI14" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(-1127.3618, -211.85959)
+rotation = 1.6537338
+
+[node name="AI15" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(-1127.3618, -211.85959)
+rotation = 1.6409043
 
 [node name="AI17" type="Node2D" parent="."]
 position = Vector2(2507.9993, -12022)
@@ -1023,7 +1045,7 @@ position = Vector2(16.000061, 2080)
 position = Vector2(92.00005, 1770)
 
 [node name="AI5" parent="AI22" instance=ExtResource("5_fos0i")]
-position = Vector2(390.00003, 1380)
+position = Vector2(1595.4395, 1546.1909)
 
 [node name="AI6" parent="AI22" instance=ExtResource("5_fos0i")]
 position = Vector2(112.00006, 1508)
@@ -1032,7 +1054,7 @@ position = Vector2(112.00006, 1508)
 position = Vector2(292.0001, 1980)
 
 [node name="AI8" parent="AI22" instance=ExtResource("5_fos0i")]
-position = Vector2(182.00006, 1220)
+position = Vector2(1319.4573, 1358.1968)
 
 [node name="AI23" type="Node2D" parent="."]
 position = Vector2(-10.0003395, -15945.999)
@@ -1042,25 +1064,25 @@ rotation = -0.091468126
 position = Vector2(272.0001, 2240)
 
 [node name="AI2" parent="AI23" instance=ExtResource("5_fos0i")]
-position = Vector2(318.00003, 1662)
+position = Vector2(435.63074, 2498.2332)
 
 [node name="AI3" parent="AI23" instance=ExtResource("5_fos0i")]
-position = Vector2(16.000061, 2080)
+position = Vector2(1310.0896, 2642.7107)
 
 [node name="AI4" parent="AI23" instance=ExtResource("5_fos0i")]
-position = Vector2(92.00005, 1770)
+position = Vector2(-349.41415, 5758.1543)
 
 [node name="AI5" parent="AI23" instance=ExtResource("5_fos0i")]
 position = Vector2(390.00003, 1380)
 
 [node name="AI6" parent="AI23" instance=ExtResource("5_fos0i")]
-position = Vector2(112.00006, 1508)
+position = Vector2(1562.8137, 2931)
 
 [node name="AI7" parent="AI23" instance=ExtResource("5_fos0i")]
 position = Vector2(292.0001, 1980)
 
 [node name="AI8" parent="AI23" instance=ExtResource("5_fos0i")]
-position = Vector2(182.00006, 1220)
+position = Vector2(3171.3757, 3699.1382)
 
 [node name="AI24" type="Node2D" parent="."]
 position = Vector2(6439.9985, -10285.999)
@@ -1231,57 +1253,6 @@ position = Vector2(474.00006, 2194)
 [node name="AI18" parent="AI3" instance=ExtResource("5_fos0i")]
 position = Vector2(474.00006, 2194)
 
-[node name="AI2" type="Node2D" parent="."]
-position = Vector2(603.9999, -2946)
-rotation = 0.14138249
-
-[node name="AI" parent="AI2" instance=ExtResource("5_fos0i")]
-
-[node name="AI2" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(432, 830)
-
-[node name="AI3" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(422, 510)
-
-[node name="AI4" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(168, 520)
-
-[node name="AI5" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(195.99998, 238)
-
-[node name="AI6" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(478, 251.99998)
-
-[node name="AI7" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(356, 31.999989)
-
-[node name="AI8" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(102, -30)
-
-[node name="AI9" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(276, -276)
-
-[node name="AI10" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(474, -196)
-
-[node name="AI11" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(210.00006, 902)
-
-[node name="AI12" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(450.00006, 1086)
-
-[node name="AI15" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(635.945, 877.1399)
-
-[node name="AI16" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(644.84894, 613.2522)
-
-[node name="AI13" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(196.92953, 1511.3304)
-
-[node name="AI14" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(454.3935, 1361.5563)
-
 [node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
 rotation = 1.5707964
@@ -1318,12 +1289,69 @@ polygon = PackedVector2Array(32, 86, 66, 178, -8, 178, -2, 90)
 
 [node name="Timer" type="Timer" parent="MC"]
 
+[node name="AI2" type="Node2D" parent="MC"]
+position = Vector2(-4428, -355.9995)
+rotation = -1.4294139
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="AI" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+
+[node name="AI2" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(432, 830)
+
+[node name="AI3" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(422, 510)
+
+[node name="AI4" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(168, 520)
+
+[node name="AI5" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(195.99998, 238)
+
+[node name="AI6" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(478, 251.99998)
+
+[node name="AI7" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(356, 31.999989)
+
+[node name="AI8" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(102, -30)
+
+[node name="AI9" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(276, -276)
+
+[node name="AI10" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(474, -196)
+
+[node name="AI11" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(210.00006, 902)
+
+[node name="AI12" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(450.00006, 1086)
+
+[node name="AI15" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(635.945, 877.1399)
+
+[node name="AI16" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(644.84894, 613.2522)
+
+[node name="AI13" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(196.92953, 1511.3304)
+
+[node name="AI14" parent="MC/AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(454.3935, 1361.5563)
+
+[node name="AItotal" type="Node2D" parent="MC/AI2"]
+position = Vector2(-182.84656, 3001.7168)
+rotation = -0.14138249
+scale = Vector2(0.99999994, 0.99999994)
+
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(-38, 102)
+position = Vector2(-10, 84)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
@@ -1337,7 +1365,7 @@ position = Vector2(8, 12)
 polygon = PackedVector2Array(2471.9995, -8486, 2429.9995, -15512, 1763.9993, -15512, 1711.9993, -16542, 761.99927, -16542, 731.99927, -19706, 5705.999, -19726, 5623.999, -16542, 4077.9993, -16522, 4057.9993, -15522, 3197.9993, -15512, 3239.9998, -5988, 2813.9998, -5968, 2419.9998, -6040, 1763.9998, -6362, 1187.9998, -7222, 1125.9998, -7890, 1207.9998, -8252, 1581.9998, -8900, 2015.9996, -8448)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(102, -4.4585618e-06)
+position = Vector2(100, -56.000008)
 polygon = PackedVector2Array(5007.9995, -9702, 5673.9995, -9864, 5825.9995, -11430, 5067.9995, -10976)
 
 [node name="Area2D2" type="Area2D" parent="Areas" groups=["Angels"]]
@@ -1382,6 +1410,7 @@ polygon = PackedVector2Array(2791.9998, -6766, 3209.9998, -6830, 3233.9998, -733
 [node name="Area2D5" type="Area2D" parent="Areas"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Area2D5"]
+position = Vector2(-82, -53.99994)
 polygon = PackedVector2Array(5057.9995, -10942, 5827.9995, -11468, 4693.9995, -12156, 3339.9995, -13116, 3319.9995, -12246, 4137.9995, -11568)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Areas/Area2D5"]
