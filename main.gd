@@ -33,3 +33,18 @@ func _on_mc_boom(pos: Variant, direction: Variant) -> void:
 	var angle_degrees = rad_to_deg(direction.angle()) +90
 	var angle_radians = deg_to_rad(angle_degrees)
 	boom.fixeddirection = Vector2(cos(angle_radians), sin(angle_radians))
+
+
+	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.y1 = -1
+		body.y2 = 1
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.y1 = 0
+		body.y2 = 1
