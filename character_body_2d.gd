@@ -7,7 +7,7 @@ signal boom(pos, direction)
 var gunlock = false
 var grenadelock = true
 var boomlock = false
-
+var cool = true
 var speed= 400.0 
 var choice = 0
 var carmode = false
@@ -48,9 +48,16 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=3
 
-	if Input.is_action_just_pressed("shoot") and choice == 0:
+	if Input.is_action_just_pressed("shoot") and choice == 0 and cool == true:
+		cool = false
 		$AnimatedSprite2D.visible = false
 		$AnimatedSprite2D2.play("default")
+		$Area2D.monitoring = true
+		await get_tree().physics_frame 
+		$Area2D.monitoring = false
+		$Timer.start(1)
+		
+		
 	if Input.is_action_just_pressed("shoot") and choice == 1:
 		$AnimatedSprite2D.visible = true
 		$AnimatedSprite2D2.visible = false
@@ -104,3 +111,12 @@ func _on_boom_pickup_body_entered(body: Node2D) -> void:
 		Input.action_press("3")
 		SharedVar.boom += 2
 		boomlock = true
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.hitenemy()
+
+
+func _on_timer_timeout() -> void:
+	cool = true

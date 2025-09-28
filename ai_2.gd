@@ -11,7 +11,10 @@ var target_direction: Vector2
 var timer: float = 0.0
 
 func _ready():
-	
+	var hue = randf_range(0.07, 0.09)
+	var saturation = randf_range(0.1, 0.35)
+	var lightness = randf_range(0.7, 0.95)
+	modulate =  Color.from_hsv(hue, saturation, lightness)
 	randomize()
 	pick_new_direction()
 	current_direction = target_direction

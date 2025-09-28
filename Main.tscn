@@ -425,13 +425,10 @@ polygon = PackedVector2Array(-81.999756, 2236, -5.999756, 2434, 68.000244, 2502,
 position = Vector2(0, -16)
 
 [node name="AI" type="Node2D" parent="."]
-position = Vector2(20, -60)
+position = Vector2(19.999996, -150)
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(220.00009, 2360)
-
-[node name="AI2" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(432, 830)
 
 [node name="AI3" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(422, 510)
@@ -443,7 +440,14 @@ position = Vector2(70.00003, 1210)
 position = Vector2(195.99998, 238)
 
 [node name="AI6" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(478, 251.99998)
+position = Vector2(488, -22.000015)
+
+[node name="AI14" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(516, -564)
+
+[node name="AI15" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(233.99997, -752)
+rotation = 2.6814752
 
 [node name="AI7" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(292.0001, 1980)
@@ -455,22 +459,23 @@ position = Vector2(102, -30)
 position = Vector2(276, -276)
 
 [node name="AI10" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(474, -196)
+position = Vector2(606, -884)
+
+[node name="AI19" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(488, -1248)
+
+[node name="AI20" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(610, -1560)
+rotation = 1.0662093
 
 [node name="AI11" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(210.00006, 902)
+position = Vector2(168.00005, 604)
 
 [node name="AI12" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(450.00006, 1086)
+position = Vector2(454.00006, 1034)
 
 [node name="AI13" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(484.00006, 1472)
-
-[node name="AI14" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(446.0001, 1916)
-
-[node name="AI15" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(68.00009, 2142)
 
 [node name="AI16" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(96.00008, 1888)
@@ -479,6 +484,733 @@ position = Vector2(96.00008, 1888)
 position = Vector2(474.00006, 2194)
 
 [node name="AI18" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(474.00006, 2194)
+
+[node name="AI4" type="Node2D" parent="."]
+position = Vector2(845.9997, -5696)
+
+[node name="AI" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI4" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI5" type="Node2D" parent="."]
+position = Vector2(887.99963, -7016)
+
+[node name="AI" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI5" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI6" type="Node2D" parent="."]
+position = Vector2(1573.9995, -8218)
+rotation = 0.21154079
+
+[node name="AI" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI6" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI7" type="Node2D" parent="."]
+position = Vector2(1749.9994, -9714.001)
+rotation = 0.21154079
+
+[node name="AI" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI7" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI8" type="Node2D" parent="."]
+position = Vector2(2241.9993, -9404.001)
+rotation = 0.21154079
+
+[node name="AI" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI8" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI9" type="Node2D" parent="."]
+position = Vector2(2625.9995, -8586)
+rotation = 0.21154079
+
+[node name="AI" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI9" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI10" type="Node2D" parent="."]
+position = Vector2(3201.9995, -8427.999)
+rotation = 0.21154079
+
+[node name="AI" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI10" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI11" type="Node2D" parent="."]
+position = Vector2(3853.9995, -8462)
+rotation = 0.21154079
+
+[node name="AI" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI11" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI12" type="Node2D" parent="."]
+position = Vector2(4589.9995, -9264)
+rotation = 0.21154079
+
+[node name="AI" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI12" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI13" type="Node2D" parent="."]
+position = Vector2(4022, -9674)
+rotation = 0.21154079
+
+[node name="AI" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI13" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI14" type="Node2D" parent="."]
+position = Vector2(2985.9995, -10460)
+rotation = 0.21154079
+
+[node name="AI" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI14" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI15" type="Node2D" parent="."]
+position = Vector2(3517.9998, -6859.999)
+rotation = -0.091468126
+
+[node name="AI" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI15" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI16" type="Node2D" parent="."]
+position = Vector2(5122, -12190)
+rotation = -0.091468126
+
+[node name="AI" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI16" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI17" type="Node2D" parent="."]
+position = Vector2(2507.9993, -12022)
+rotation = -0.091468126
+
+[node name="AI" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI17" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI18" type="Node2D" parent="."]
+position = Vector2(2507.9995, -13358.001)
+rotation = -0.091468126
+
+[node name="AI" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI18" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI19" type="Node2D" parent="."]
+position = Vector2(2507.9995, -13358.001)
+rotation = -0.091468126
+
+[node name="AI" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI19" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI20" type="Node2D" parent="."]
+position = Vector2(2423.9993, -14770)
+rotation = -0.091468126
+
+[node name="AI" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI20" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI21" type="Node2D" parent="."]
+position = Vector2(-360.00098, -13456)
+rotation = -0.091468126
+
+[node name="AI" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI21" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI22" type="Node2D" parent="."]
+position = Vector2(-442.00058, -14861.999)
+rotation = -0.091468126
+
+[node name="AI" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI22" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI23" type="Node2D" parent="."]
+position = Vector2(-10.0003395, -15945.999)
+rotation = -0.091468126
+
+[node name="AI" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI23" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI24" type="Node2D" parent="."]
+position = Vector2(6439.9985, -10285.999)
+rotation = 1.034147
+
+[node name="AI" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI24" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI25" type="Node2D" parent="."]
+position = Vector2(-510.00098, -10296)
+rotation = -0.801684
+
+[node name="AI" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI25" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI26" type="Node2D" parent="."]
+position = Vector2(3982, -5370.0005)
+rotation = 0.53389597
+
+[node name="AI" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI26" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI27" type="Node2D" parent="."]
+position = Vector2(3216, -3768)
+rotation = 1.0080856
+
+[node name="AI" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI3" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(16.000061, 2080)
+
+[node name="AI4" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(92.00005, 1770)
+
+[node name="AI5" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI6" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(112.00006, 1508)
+
+[node name="AI7" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI8" parent="AI27" instance=ExtResource("5_fos0i")]
+position = Vector2(182.00006, 1220)
+
+[node name="AI28" type="Node2D" parent="."]
+position = Vector2(3617.9998, -3032)
+rotation = 1.0080856
+
+[node name="AI29" type="Node2D" parent="."]
+position = Vector2(-1789.9998, -5249.9995)
+rotation = -1.1454085
+
+[node name="AI" parent="AI29" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI29" instance=ExtResource("5_fos0i")]
+position = Vector2(318.00003, 1662)
+
+[node name="AI5" parent="AI29" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI7" parent="AI29" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI30" type="Node2D" parent="."]
+position = Vector2(-2368.0005, -7120)
+rotation = -0.6128244
+
+[node name="AI" parent="AI30" instance=ExtResource("5_fos0i")]
+position = Vector2(272.0001, 2240)
+
+[node name="AI2" parent="AI30" instance=ExtResource("5_fos0i")]
+position = Vector2(348.652, 1646.0795)
+
+[node name="AI5" parent="AI30" instance=ExtResource("5_fos0i")]
+position = Vector2(390.00003, 1380)
+
+[node name="AI7" parent="AI30" instance=ExtResource("5_fos0i")]
+position = Vector2(292.0001, 1980)
+
+[node name="AI3" type="Node2D" parent="."]
+position = Vector2(19.999996, -150)
+
+[node name="AI" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(220.00009, 2360)
+
+[node name="AI4" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(104.000015, 876)
+
+[node name="AI7" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(512.0001, 1820)
+
+[node name="AI13" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(484.00006, 1472)
+
+[node name="AI17" parent="AI3" instance=ExtResource("5_fos0i")]
+position = Vector2(474.00006, 2194)
+
+[node name="AI18" parent="AI3" instance=ExtResource("5_fos0i")]
 position = Vector2(474.00006, 2194)
 
 [node name="AI2" type="Node2D" parent="."]
@@ -523,21 +1255,6 @@ position = Vector2(450.00006, 1086)
 [node name="AI13" parent="AI2" instance=ExtResource("5_fos0i")]
 position = Vector2(484.00006, 1472)
 
-[node name="AI14" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(446.0001, 1916)
-
-[node name="AI15" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(68.00009, 2142)
-
-[node name="AI16" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(96.00008, 1888)
-
-[node name="AI17" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(474.00006, 2194)
-
-[node name="AI18" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(474.00006, 2194)
-
 [node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
 rotation = 1.5707964
@@ -562,21 +1279,24 @@ animation = &"Normal"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
-position = Vector2(8.000011, 118)
-scale = Vector2(2, 2)
+position = Vector2(-1.4321175, 118)
+scale = Vector2(2.0372076, 2)
 sprite_frames = SubResource("SpriteFrames_hhcpw")
 
 [node name="Area2D" type="Area2D" parent="MC"]
+monitoring = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MC/Area2D"]
 polygon = PackedVector2Array(32, 86, 66, 178, -8, 178, -2, 90)
+
+[node name="Timer" type="Timer" parent="MC"]
 
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(2, -4)
+position = Vector2(924, 55.999958)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
@@ -596,6 +1316,7 @@ polygon = PackedVector2Array(5007.9995, -9702, 5673.9995, -9864, 5825.9995, -114
 [node name="Area2D2" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D2"]
+position = Vector2(1104, 235.99995)
 polygon = PackedVector2Array(-42, -794, 548, -2368, 1302, -2138, 704, -548, -88, -686)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Areas/Area2D2"]
@@ -810,6 +1531,8 @@ polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -8
 [connection signal="boom" from="MC" to="." method="_on_mc_boom"]
 [connection signal="grenade" from="MC" to="." method="_on_mc_grenade"]
 [connection signal="laser" from="MC" to="." method="_on_mc_laser"]
+[connection signal="body_entered" from="MC/Area2D" to="MC" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="MC/Timer" to="MC" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D3" to="." method="_on_area_2d_3_body_entered"]
