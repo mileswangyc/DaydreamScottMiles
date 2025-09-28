@@ -1,14 +1,17 @@
 extends CharacterBody2D
 
-@export var speed: float = 400.0  # pixels per second
-
+signal laser(pos, direction)
+ 
+var speed= 400.0 
+var can_laser = true
 func _physics_process(delta: float) -> void:
-	# Read WASD/arrow input (left, right, up, down must match Input Map action names)
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")
-	# Set the kinematic velocity (CharacterBody2D has a built-in `velocity` property)
 	velocity = dir * speed
-	
+	print(global_position)
 	var mousepos = get_global_mouse_position()
 	rotation = (global_position-mousepos).angle()
-	# Apply movement & collision response (call in _physics_process)
+	
+	var player_direction = (get_global_mouse_position() - position).normalized()
+	if Input.is_action_just_pressed("shoot") and can_laser:
+		laser.emit(position, player_direction)
 	move_and_slide()
