@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=62 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -185,6 +185,10 @@ font_size = 96
 
 [sub_resource type="LabelSettings" id="LabelSettings_2gh4u"]
 font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_devvj"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
 
 [node name="Root" type="Node2D"]
 position = Vector2(-5874, -1922)
@@ -1332,7 +1336,7 @@ shape = SubResource("CircleShape2D_ss07l")
 [node name="Camera2D" type="Camera2D" parent="MC"]
 position = Vector2(-68, -35.999992)
 scale = Vector2(2, 2)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.6, 0.6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
@@ -1557,7 +1561,7 @@ texture = ExtResource("18_5tuhn")
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="CarPickup" type="Area2D" parent="Pickups"]
-position = Vector2(-762, -1210)
+position = Vector2(84, -798)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pickups/CarPickup"]
 position = Vector2(3079.9995, -11896)
@@ -1632,6 +1636,18 @@ texture = ExtResource("9_03owx")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pickups/BoomPickup2"]
 position = Vector2(-377.99997, 676)
 polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -838, 438, -788, 478, -746, 518, -698, 524, -622, 472, -500, 428, -468)
+
+[node name="Node2D" type="Node2D" parent="Pickups"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -397.99988
+offset_top = 2524.0002
+offset_right = 2455.0
+offset_bottom = 2801.0002
+rotation = -1.572604
+text = "Black Friday is brutal, and you are the predator. 
+Sacrifices must be made."
+label_settings = SubResource("LabelSettings_devvj")
 
 [connection signal="boom" from="MC" to="." method="_on_mc_boom"]
 [connection signal="grenade" from="MC" to="." method="_on_mc_grenade"]
