@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 			SharedVar.grenades -= 1
 		
 	if Input.is_action_just_pressed("shoot") and choice == 3:
-		if SharedVar.booms > 0:
+		if SharedVar.boom > 0:
 			boom.emit(position, player_direction)
 			SharedVar.boom -= 1
 		
