@@ -46,8 +46,10 @@ func _physics_process(delta: float) -> void:
 
 	
 	if Input.is_action_just_pressed("shoot") and choice == 1:
-		laser.emit(position, player_direction)
-		
+
+		if SharedVar.bullet > 0:
+			laser.emit(position, player_direction)
+			SharedVar.bullet -= 1
 	if Input.is_action_just_pressed("shoot") and choice == 2:
 		grenade.emit(position, player_direction)
 		
@@ -75,3 +77,7 @@ func _on_gun_pickup_body_entered(body: Node2D) -> void:
 		Input.action_press("1")
 		SharedVar.bullet += 5
 		gunlock = true
+
+
+func _on_grenade_pickup_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
