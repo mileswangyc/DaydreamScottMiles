@@ -48,3 +48,21 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
 		body.y1 = 0
 		body.y2 = 1
+
+
+func _on_area_2d_3_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.y1 = 0
+		body.y2 = -1
+
+
+func _on_area_2d_4_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.y1 = 0.8
+		body.y2 = 1
+
+
+func _on_area_2d_5_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		body.y1 = -0.8
+		body.y2 = -1

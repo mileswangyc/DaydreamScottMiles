@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://06n35iloxkhb"]
+[gd_scene load_steps=7 format=3 uid="uid://cs8kdgqitdruu"]
 
 [ext_resource type="Texture2D" uid="uid://0snbs07ldhls" path="res://Assets/Vehicle_Moving_Animation.png" id="1_1on7t"]
-[ext_resource type="Script" uid="uid://53nrjthk2n41" path="res://animated_sprite_2d.gd" id="2_j6xor"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="2_j6xor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1on7t"]
 atlas = ExtResource("1_1on7t")
@@ -25,10 +25,19 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6xor"]
+size = Vector2(260, 130)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Vehicle_Animated" type="AnimatedSprite2D" parent="."]
+position = Vector2(-22, 163)
+scale = Vector2(1.71, 1.71)
 sprite_frames = SubResource("SpriteFrames_j6xor")
 frame = 1
 frame_progress = 0.7903494
 script = ExtResource("2_j6xor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, -7)
+shape = SubResource("RectangleShape2D_j6xor")

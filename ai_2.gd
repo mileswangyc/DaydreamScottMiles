@@ -4,8 +4,8 @@ extends CharacterBody2D
 @export var move_time: float = 1.0
 @export var turn_speed: float = 5.0 
 
-var y1 = 0
-var y2 =0
+var y1 = -1
+var y2 =1
 var current_direction: Vector2
 var target_direction: Vector2
 var timer: float = 0.0
