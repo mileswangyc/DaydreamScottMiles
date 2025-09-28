@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var speed: int = 1500
+@export var speed: int = 3000
 var fixeddirection
 var explode 
 

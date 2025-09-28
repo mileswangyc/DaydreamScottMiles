@@ -421,6 +421,12 @@ polygon = PackedVector2Array(635.9995, -14160, 1689.9995, -13710, 2431.9995, -13
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D2"]
 polygon = PackedVector2Array(-81.999756, 2236, -5.999756, 2434, 68.000244, 2502, 136.00024, 2514, 194.00024, 2518, 256.00024, 2516, 338.00024, 2518, 418.00024, 2498, 508.00024, 2470, 542.00024, 2426, 628.00024, 2332, 648.00024, 2278, 806.00024, 2302, 700.00024, 2726, -113.999756, 2774, -219.99976, 2458)
 
+[node name="ColorRect" type="ColorRect" parent="Map"]
+offset_left = 633.9998
+offset_top = -4439.1245
+offset_right = 1056.888
+offset_bottom = -4085.921
+
 [node name="Projectiles" type="Node2D" parent="."]
 position = Vector2(0, -16)
 
@@ -443,14 +449,18 @@ position = Vector2(195.99998, 238)
 position = Vector2(488, -22.000015)
 
 [node name="AI14" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(516, -564)
+position = Vector2(380, -544)
+
+[node name="AI22" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(606, -630)
+rotation = 1.4852322
 
 [node name="AI15" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(233.99997, -752)
 rotation = 2.6814752
 
 [node name="AI7" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(292.0001, 1980)
+position = Vector2(304.00006, 1274)
 
 [node name="AI8" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(102, -30)
@@ -459,10 +469,14 @@ position = Vector2(102, -30)
 position = Vector2(276, -276)
 
 [node name="AI10" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(606, -884)
+position = Vector2(504, -1018)
+
+[node name="AI23" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(688, -1050)
+rotation = 1.3474095
 
 [node name="AI19" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(488, -1248)
+position = Vector2(314, -1192)
 
 [node name="AI20" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(610, -1560)
@@ -473,6 +487,9 @@ position = Vector2(168.00005, 604)
 
 [node name="AI12" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(454.00006, 1034)
+
+[node name="AI21" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(508.00006, 746)
 
 [node name="AI13" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(484.00006, 1472)
@@ -1252,8 +1269,17 @@ position = Vector2(210.00006, 902)
 [node name="AI12" parent="AI2" instance=ExtResource("5_fos0i")]
 position = Vector2(450.00006, 1086)
 
+[node name="AI15" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(635.945, 877.1399)
+
+[node name="AI16" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(644.84894, 613.2522)
+
 [node name="AI13" parent="AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(484.00006, 1472)
+position = Vector2(196.92953, 1511.3304)
+
+[node name="AI14" parent="AI2" instance=ExtResource("5_fos0i")]
+position = Vector2(454.3935, 1361.5563)
 
 [node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
@@ -1279,7 +1305,7 @@ animation = &"Normal"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
-position = Vector2(-1.4321175, 118)
+position = Vector2(6.567871, 118)
 scale = Vector2(2.0372076, 2)
 sprite_frames = SubResource("SpriteFrames_hhcpw")
 
@@ -1296,11 +1322,11 @@ polygon = PackedVector2Array(32, 86, 66, 178, -8, 178, -2, 90)
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(924, 55.999958)
+position = Vector2(-38, 102)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
-polygon = PackedVector2Array(544, -2364, 1258, -2476, 1312, -2784, 1401.9998, -4140, 1405.9998, -5568, 793.99976, -5798, 741.99976, -4534, 667.99976, -4172)
+polygon = PackedVector2Array(570, -2552, 1200, -2758, 1312, -2784, 1401.9998, -4140, 1405.9998, -5568, 793.99976, -5798, 741.99976, -4534, 667.99976, -4172)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
 polygon = PackedVector2Array(3511.9998, -4598, 3485.9998, -6028, 3243.9998, -5978, 3243.9995, -8080, 3243.9995, -9454, 3255.9995, -8666, 4099.9995, -8616, 4203.9995, -8718, 4379.9995, -8392, 4156, -4348)
@@ -1316,7 +1342,7 @@ polygon = PackedVector2Array(5007.9995, -9702, 5673.9995, -9864, 5825.9995, -114
 [node name="Area2D2" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D2"]
-position = Vector2(1104, 235.99995)
+position = Vector2(-26, 63.99997)
 polygon = PackedVector2Array(-42, -794, 548, -2368, 1302, -2138, 704, -548, -88, -686)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Areas/Area2D2"]
@@ -1336,7 +1362,7 @@ polygon = PackedVector2Array(3939.9998, -8666, 3229.9995, -8674, 3229.9995, -942
 [node name="Area2D4" type="Area2D" parent="Areas"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Area2D4"]
-polygon = PackedVector2Array(3495.9998, -4574, 4206, -4332, 2944, -2912, 1306, -2160, 696, -2352, 1314, -2434, 1322, -2794, 2426, -3320)
+polygon = PackedVector2Array(3495.9998, -4574, 4206, -4332, 2944, -2912, 1306, -2160, 534, -2308, 850, -2588, 1100, -2668, 1322, -2794, 2426, -3320)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Areas/Area2D4"]
 position = Vector2(50, -92)
@@ -1347,6 +1373,10 @@ polygon = PackedVector2Array(-1814.0005, -8558, -1500.0005, -9852, -388.0005, -1
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Areas/Area2D4"]
 polygon = PackedVector2Array(855.99927, -14724, 1775.9993, -15524, 1703.9993, -16372, 379.99927, -15210)
+
+[node name="Polygon2D" type="CollisionPolygon2D" parent="Areas/Area2D4"]
+position = Vector2(50, -24.000002)
+polygon = PackedVector2Array(2791.9998, -6766, 3209.9998, -6830, 3233.9998, -7332, 2909.9998, -7230, 2687.9998, -7348, 2663.9998, -6986)
 
 [node name="Area2D5" type="Area2D" parent="Areas"]
 

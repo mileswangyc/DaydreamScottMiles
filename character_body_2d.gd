@@ -5,7 +5,7 @@ signal grenade(pos, direction)
 signal boom(pos, direction)
 
 var gunlock = false
-var grenadelock = true
+var grenadelock = false
 var boomlock = false
 var cool = true
 var speed= 400.0 
@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 		$Area2D.monitoring = true
 		await get_tree().physics_frame 
 		$Area2D.monitoring = false
-		$Timer.start(1)
+		$Timer.start(0.5)
 		
 		
 	if Input.is_action_just_pressed("shoot") and choice == 1:
@@ -70,7 +70,9 @@ func _physics_process(delta: float) -> void:
 			SharedVar.grenades -= 1
 		
 	if Input.is_action_just_pressed("shoot") and choice == 3:
-		boom.emit(position, player_direction)
+		if SharedVar.booms > 0:
+			boom.emit(position, player_direction)
+			SharedVar.boom -= 1
 		
 	if Input.is_action_just_pressed("Test"):
 		$"../Car".rotation_degrees = -90
