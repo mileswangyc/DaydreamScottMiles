@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cewuh7av3u2hh"]
+
+[node name="DeathParticle" type="CPUParticles2D"]

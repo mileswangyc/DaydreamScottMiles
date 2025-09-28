@@ -21,6 +21,8 @@ func _physics_process(delta: float) -> void:
 	rotation = (global_position-mousepos).angle()
 	var player_direction = (global_position-mousepos).normalized()
 	
+	
+	
 	if Input.is_action_just_pressed("1") and gunlock == true:
 		choice = 1
 		$"../CanvasLayer/bull2".modulate = Color(0, 0, 0)
@@ -46,8 +48,12 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=3
 
-	
+	if Input.is_action_just_pressed("shoot") and choice == 0:
+		$AnimatedSprite2D.visible = false
+		$AnimatedSprite2D2.play("default")
 	if Input.is_action_just_pressed("shoot") and choice == 1:
+		$AnimatedSprite2D.visible = true
+		$AnimatedSprite2D2.visible = false
 		if SharedVar.bullet > 0:
 			laser.emit(position, player_direction)
 			SharedVar.bullet -= 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=60 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -12,11 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
-[ext_resource type="Texture2D" uid="uid://qg8x36ggf3ad" path="res://Assets/Punching_New.png" id="9_sc1dx"]
+[ext_resource type="Texture2D" uid="uid://kme0e7uf4b2r" path="res://Assets/Punching_Final.png" id="9_5tuhn"]
 [ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" uid="uid://bqg44jvnn5r7t" path="res://canvas_layer.gd" id="11_kjvhd"]
 [ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
 [ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
 [ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -109,22 +111,6 @@ size = Vector2(19.249813, 2814.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
 radius = 228.31557
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6s68o"]
-atlas = ExtResource("9_sc1dx")
-region = Rect2(0, 0, 144, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2r3kk"]
-atlas = ExtResource("9_sc1dx")
-region = Rect2(144, 0, 144, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jwo8y"]
-atlas = ExtResource("9_sc1dx")
-region = Rect2(432, 0, 144, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gu5ho"]
-atlas = ExtResource("9_sc1dx")
-region = Rect2(720, 0, 144, 72)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjvhd"]
 animations = [{
 "frames": [{
@@ -143,29 +129,48 @@ animations = [{
 "loop": true,
 "name": &"Normal",
 "speed": 5.0
-}, {
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gh4u"]
+atlas = ExtResource("9_5tuhn")
+region = Rect2(0, 0, 507, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_devvj"]
+atlas = ExtResource("9_5tuhn")
+region = Rect2(0, 279, 507, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b0ty"]
+atlas = ExtResource("9_5tuhn")
+region = Rect2(0, 837, 507, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg4s2"]
+atlas = ExtResource("9_5tuhn")
+region = Rect2(0, 1116, 507, 279)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hhcpw"]
+animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6s68o")
+"texture": SubResource("AtlasTexture_2gh4u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2r3kk")
+"texture": SubResource("AtlasTexture_devvj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jwo8y")
+"texture": SubResource("AtlasTexture_3b0ty")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gu5ho")
+"texture": SubResource("AtlasTexture_bg4s2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gu5ho")
+"texture": SubResource("AtlasTexture_bg4s2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6s68o")
+"texture": SubResource("AtlasTexture_2gh4u")
 }],
 "loop": false,
 "name": &"default",
-"speed": 24.0
+"speed": 60.0
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_trn2v"]
@@ -173,6 +178,12 @@ font_size = 136
 
 [sub_resource type="LabelSettings" id="LabelSettings_03owx"]
 font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_kjvhd"]
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_2gh4u"]
+font_size = 96
 
 [node name="Root" type="Node2D"]
 position = Vector2(-5874, -1922)
@@ -544,10 +555,21 @@ zoom = Vector2(0.6, 0.6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
-position = Vector2(6.0000014, 13.999999)
+position = Vector2(6.000002, 14)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kjvhd")
 animation = &"Normal"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="MC"]
+modulate = Color(0.61960787, 0.53333336, 1, 1)
+position = Vector2(8.000011, 118)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hhcpw")
+
+[node name="Area2D" type="Area2D" parent="MC"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MC/Area2D"]
+polygon = PackedVector2Array(32, 86, 66, 178, -8, 178, -2, 90)
 
 [node name="Areas" type="Node2D" parent="."]
 
@@ -624,6 +646,7 @@ position = Vector2(8000, 0)
 rotation = -1.5707964
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("11_kjvhd")
 
 [node name="gren3" type="Label" parent="CanvasLayer"]
 offset_left = 412.0
@@ -694,10 +717,33 @@ offset_bottom = 306.0
 text = "1 Key"
 label_settings = SubResource("LabelSettings_03owx")
 
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+
+[node name="TV\'s Left" type="Label" parent="CanvasLayer"]
+offset_left = 431.0
+offset_top = -7.0
+offset_right = 2111.0
+offset_bottom = 1330.0
+text = "100"
+label_settings = SubResource("LabelSettings_kjvhd")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 225.0
+offset_top = -6.0
+offset_right = 405.0
+offset_bottom = 126.0
+text = "Left"
+label_settings = SubResource("LabelSettings_2gh4u")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(121.99999, 69)
+scale = Vector2(0.435, 0.435)
+texture = ExtResource("18_5tuhn")
+
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="GunPickup" type="Area2D" parent="Pickups"]
-position = Vector2(307.99997, -566)
+position = Vector2(733.9999, -2002)
 script = ExtResource("10_wkp8b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pickups/GunPickup"]
@@ -769,6 +815,7 @@ polygon = PackedVector2Array(352, -442, 222, -468, 166, -660, 218, -772, 350, -8
 [connection signal="body_entered" from="Areas/Area2D3" to="." method="_on_area_2d_3_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D4" to="." method="_on_area_2d_4_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D5" to="." method="_on_area_2d_5_body_entered"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Pickups/GunPickup" to="MC" method="_on_gun_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/GrenadePickup" to="MC" method="_on_grenade_pickup_body_entered"]
 [connection signal="body_entered" from="Pickups/GrenadePickup2" to="MC" method="_on_grenade_pickup_body_entered"]
