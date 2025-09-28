@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=11 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Texture2D" uid="uid://r07me7e7gbgg" path="res://map.png" id="1_cm0pq"]
+[ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Texture2D" uid="uid://wv8qe4o2m8ak" path="res://Assets/Player.png" id="1_xe0hs"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="Script" uid="uid://bhdu5wyqrpr3n" path="res://ai_2.gd" id="3_r0du0"]
@@ -20,10 +21,11 @@ size = Vector2(39.000114, 2865)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ss07l"]
 radius = 296.9714
 
-[node name="Player" type="Node2D"]
+[node name="Root" type="Node2D"]
 position = Vector2(-5874, -1922)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_fos0i")
 
 [node name="Map" type="Node2D" parent="."]
 
@@ -348,3 +350,8 @@ texture = ExtResource("1_xe0hs")
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
+
+[node name="Projectiles" type="Node2D" parent="."]
+position = Vector2(0, -16)
+
+[connection signal="laser" from="MC" to="." method="_on_mc_laser"]
