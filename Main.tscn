@@ -1,11 +1,11 @@
-[gd_scene load_steps=54 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=55 format=3 uid="uid://bujolfmlwwxtr"]
 
-[ext_resource type="Texture2D" uid="uid://d0du13sm583ol" path="res://Assets/Final Map.png" id="1_cm0pq"]
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
+[ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
-[ext_resource type="PackedScene" uid="uid://cbqd8k2e5cjpv" path="res://car.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" path="res://car.tscn" id="6_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
@@ -13,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
 [ext_resource type="Texture2D" uid="uid://qg8x36ggf3ad" path="res://Assets/Punching_New.png" id="9_sc1dx"]
-[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
-[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
-[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
-[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Script" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" path="res://bull_2.gd" id="15_5tuhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fos0i"]
 size = Vector2(40.5003, 2878.5)
@@ -35,6 +35,9 @@ size = Vector2(43.054253, 2068.2761)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkp8b"]
 size = Vector2(32.24862, 2059.082)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc1dx"]
+radius = 428.62115
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20pc6"]
 size = Vector2(59.846077, 1038.7219)
@@ -183,7 +186,7 @@ script = ExtResource("1_fos0i")
 position = Vector2(2535.9995, -9580)
 rotation = -1.5707964
 scale = Vector2(5.535899, 5.738279)
-texture = ExtResource("1_cm0pq")
+texture = ExtResource("2_sc1dx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Map" groups=["walls"]]
 
@@ -225,6 +228,12 @@ position = Vector2(4984.5967, -7026.209)
 rotation = 0.85521126
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_03owx")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Map/StaticBody2D"]
+position = Vector2(2988, -7716)
+rotation = 0.85521126
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("CircleShape2D_sc1dx")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Map/StaticBody2D"]
 position = Vector2(4594.38, -6788.1924)
@@ -398,13 +407,17 @@ polygon = PackedVector2Array(3191.9995, -9526, 3183.9995, -12316, 4115.9995, -11
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Map/StaticBody2D2"]
 polygon = PackedVector2Array(635.9995, -14160, 1689.9995, -13710, 2431.9995, -13470, 2421.9995, -15506, 1747.9993, -15524, 879.99927, -14764)
 
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/StaticBody2D2"]
+polygon = PackedVector2Array(-81.999756, 2236, -5.999756, 2434, 68.000244, 2502, 136.00024, 2514, 194.00024, 2518, 256.00024, 2516, 338.00024, 2518, 418.00024, 2498, 508.00024, 2470, 542.00024, 2426, 628.00024, 2332, 648.00024, 2278, 806.00024, 2302, 700.00024, 2726, -113.999756, 2774, -219.99976, 2458)
+
 [node name="Projectiles" type="Node2D" parent="."]
 position = Vector2(0, -16)
 
 [node name="AI" type="Node2D" parent="."]
-position = Vector2(-816.0001, -3350)
+position = Vector2(20, -60)
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
+position = Vector2(220.00009, 2360)
 
 [node name="AI2" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(432, 830)
@@ -413,7 +426,7 @@ position = Vector2(432, 830)
 position = Vector2(422, 510)
 
 [node name="AI4" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(168, 520)
+position = Vector2(70.00003, 1210)
 
 [node name="AI5" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(195.99998, 238)
@@ -422,7 +435,7 @@ position = Vector2(195.99998, 238)
 position = Vector2(478, 251.99998)
 
 [node name="AI7" parent="AI" instance=ExtResource("5_fos0i")]
-position = Vector2(356, 31.999989)
+position = Vector2(292.0001, 1980)
 
 [node name="AI8" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(102, -30)
@@ -527,9 +540,10 @@ shape = SubResource("CircleShape2D_ss07l")
 
 [node name="Camera2D" type="Camera2D" parent="MC"]
 scale = Vector2(2, 2)
-zoom = Vector2(0.9, 0.9)
+zoom = Vector2(0.6, 0.6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
+modulate = Color(0.61960787, 0.53333336, 1, 1)
 position = Vector2(6.0000014, 13.999999)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_kjvhd")
@@ -547,9 +561,10 @@ polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, 
 polygon = PackedVector2Array(544, -2364, 1258, -2476, 1312, -2784, 1401.9998, -4140, 1405.9998, -5568, 793.99976, -5798, 741.99976, -4534, 667.99976, -4172)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-polygon = PackedVector2Array(3511.9998, -4598, 3485.9998, -6028, 3243.9998, -5978, 3243.9995, -9454, 3255.9995, -8666, 4099.9995, -8616, 4203.9995, -8718, 4379.9995, -8392, 4156, -4348)
+polygon = PackedVector2Array(3511.9998, -4598, 3485.9998, -6028, 3243.9998, -5978, 3243.9995, -8080, 3243.9995, -9454, 3255.9995, -8666, 4099.9995, -8616, 4203.9995, -8718, 4379.9995, -8392, 4156, -4348)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
+position = Vector2(8, 12)
 polygon = PackedVector2Array(2471.9995, -8486, 2429.9995, -15512, 1763.9993, -15512, 1711.9993, -16542, 761.99927, -16542, 731.99927, -19706, 5705.999, -19726, 5623.999, -16542, 4077.9993, -16522, 4057.9993, -15522, 3197.9993, -15512, 3239.9998, -5988, 2813.9998, -5968, 2419.9998, -6040, 1763.9998, -6362, 1187.9998, -7222, 1125.9998, -7890, 1207.9998, -8252, 1581.9998, -8900, 2015.9996, -8448)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Areas/Area2D"]
