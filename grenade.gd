@@ -1,0 +1,28 @@
+extends RigidBody2D
+
+@export var speed: int = 1500
+var fixeddirection
+var explode 
+
+func _ready():
+	$Timer.start(1)
+func _process(delta):
+	pass
+
+
+
+
+
+func _on_timer_timeout() -> void:
+	$Area2D.explode()
+	print("timerTriggered")
+	
+#func _on_body_entered(body):
+	#if explode == true:
+		#if body.is_in_group("player"):
+			#return 
+		#if body.is_in_group("enemies"):
+			#body.hitenemy()
+		#elif "hit" in body:
+			#body.hit()
+		#queue_free()
