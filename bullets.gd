@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: int = 1500
+@export var speed: int = 2500
 var fixeddirection
 signal hitenemy
 
@@ -9,7 +9,7 @@ func _ready():
 
 func _process(delta):
 	position += fixeddirection * speed * delta
-	
+	rotation = fixeddirection.angle()
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):

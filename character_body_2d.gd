@@ -5,7 +5,7 @@ signal grenade(pos, direction)
 signal boom(pos, direction)
 
 var gunlock = false
-var grenadelock = false
+var grenadelock = true
 var boomlock = false
 
 var speed= 400.0 
@@ -34,24 +34,27 @@ func _physics_process(delta: float) -> void:
 		$"../CanvasLayer/gren3".modulate = Color(0, 0, 0)
 		$"../CanvasLayer/boom3".modulate = Color(1, 1, 1)
 		$"../CanvasLayer/bull2".modulate = Color(1, 1, 1)
-		$AnimatedSprite2D.animation.play("Normal")
+		$AnimatedSprite2D.play("Normal")
+		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=2
 	if Input.is_action_just_pressed("3") and boomlock == true:
 		choice = 3
 		$"../CanvasLayer/boom3".modulate = Color(0, 0, 0)
 		$"../CanvasLayer/bull2".modulate = Color(1, 1, 1)
 		$"../CanvasLayer/gren3".modulate = Color(1, 1, 1)
-		$AnimatedSprite2D.animation.play("Normal")
+		$AnimatedSprite2D.play("Normal")
+		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=3
 
 	
 	if Input.is_action_just_pressed("shoot") and choice == 1:
-
 		if SharedVar.bullet > 0:
 			laser.emit(position, player_direction)
 			SharedVar.bullet -= 1
 	if Input.is_action_just_pressed("shoot") and choice == 2:
-		grenade.emit(position, player_direction)
+		if SharedVar.grenades > 0:
+			grenade.emit(position, player_direction)
+			SharedVar.grenades -= 1
 		
 	if Input.is_action_just_pressed("shoot") and choice == 3:
 		boom.emit(position, player_direction)
@@ -80,4 +83,18 @@ func _on_gun_pickup_body_entered(body: Node2D) -> void:
 
 
 func _on_grenade_pickup_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("player"):
+		$"../Pickups/GrenadePickup".queue_free()
+		$"../Pickups/GrenadePickup2".queue_free()
+		Input.action_press("2")
+		SharedVar.grenades += 2
+		grenadelock = true
+
+
+func _on_boom_pickup_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		$"../Pickups/BoomPickup".queue_free()
+		$"../Pickups/BoomPickup2".queue_free()
+		Input.action_press("3")
+		SharedVar.boom += 2
+		boomlock = true
