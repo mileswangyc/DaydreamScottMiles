@@ -161,6 +161,9 @@ shape = SubResource("RectangleShape2D_fpfj3")
 position = Vector2(689.625, 887.25)
 shape = SubResource("RectangleShape2D_sc1dx")
 
+[node name="Projectiles" type="Node2D" parent="."]
+position = Vector2(0, -16)
+
 [node name="MC" type="CharacterBody2D" parent="."]
 position = Vector2(248.00005, 1482)
 rotation = 1.5707964
@@ -455,8 +458,5 @@ texture = ExtResource("1_xe0hs")
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
-
-[node name="Projectiles" type="Node2D" parent="."]
-position = Vector2(0, -16)
 
 [connection signal="laser" from="MC" to="." method="_on_mc_laser"]
