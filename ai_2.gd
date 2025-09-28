@@ -15,7 +15,6 @@ func _ready():
 	var saturation = randf_range(0.1, 0.35)
 	var lightness = randf_range(0.7, 0.95)
 	modulate =  Color.from_hsv(hue, saturation, lightness)
-	randomize()
 	pick_new_direction()
 	current_direction = target_direction
 

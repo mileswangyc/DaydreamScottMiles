@@ -68,7 +68,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_crcy4"]
-radius = 34.132095
+radius = 21.782177
 
 [node name="boom" type="Area2D"]
 scale = Vector2(3.535, 3.535)
@@ -81,6 +81,7 @@ autoplay = "default"
 frame_progress = 0.4684538
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.2432814, 1.4144272)
 shape = SubResource("CircleShape2D_crcy4")
 
 [node name="Timer" type="Timer" parent="."]

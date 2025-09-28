@@ -4,7 +4,7 @@ func _ready() -> void:
 	goagain()
 
 func goagain():
-	$Timer.start(randf_range(0.6,0.9))
+	$Timer.start(randf_range(0.5,0.9))
 	 
 
 func _on_timer_timeout() -> void:
