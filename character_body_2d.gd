@@ -13,5 +13,4 @@ func _physics_process(delta: float) -> void:
 	var player_direction = (global_position-mousepos).normalized()
 	if Input.is_action_just_pressed("shoot") and can_laser:
 		laser.emit(position, player_direction)
-		print(player_direction)
 	move_and_slide()

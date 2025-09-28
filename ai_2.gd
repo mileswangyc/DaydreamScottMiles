@@ -9,24 +9,26 @@ var target_direction: Vector2
 var timer: float = 0.0
 
 func _ready():
+	
 	randomize()
 	pick_new_direction()
-	current_direction = target_direction  # start aligned
+	current_direction = target_direction
 
 func _physics_process(delta):
+
 	timer -= delta
 	if timer <= 0:
 		pick_new_direction()
 
-	# Smoothly rotate from current → target
+	
 	var current_angle = current_direction.angle()
 	var target_angle = target_direction.angle()
 	var new_angle = lerp_angle(current_angle, target_angle, turn_speed * delta)
 
-	# Update direction from smoothed angle
+
 	current_direction = Vector2.RIGHT.rotated(new_angle)
 
-	# Move and rotate
+	
 	velocity = current_direction * speed
 	rotation = new_angle + PI
 	move_and_slide()
@@ -34,3 +36,6 @@ func _physics_process(delta):
 func pick_new_direction():
 	target_direction = Vector2(1, randf_range(-1, 1)).normalized()
 	timer = randf_range(0.5,1.5)
+func hitenemy():
+	print("Enemy was hit!")
+	queue_free()
