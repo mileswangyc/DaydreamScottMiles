@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Daydream"
+run/main_scene="uid://bujolfmlwwxtr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+player=""
+enemies=""
 
 [input]
 

@@ -304,7 +304,10 @@ shape = SubResource("RectangleShape2D_fpfj3")
 position = Vector2(689.625, 887.25)
 shape = SubResource("RectangleShape2D_sc1dx")
 
-[node name="MC" type="CharacterBody2D" parent="."]
+[node name="Projectiles" type="Node2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="MC" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(248.00005, 1482)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
@@ -324,14 +327,17 @@ shape = SubResource("CircleShape2D_ss07l")
 scale = Vector2(2, 2)
 zoom = Vector2(0.9, 0.9)
 
-[node name="AI" type="Node2D" parent="."]
+[node name="AI" type="Node2D" parent="." groups=["enemies"]]
 position = Vector2(392, -34.000015)
 
-[node name="AI2" type="CharacterBody2D" parent="AI"]
+[node name="AI2" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(88.000015, 750)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI2"]
 position = Vector2(16, 16)
@@ -342,11 +348,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI3" type="CharacterBody2D" parent="AI"]
+[node name="AI3" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-322, 704)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI3"]
 position = Vector2(16, 16)
@@ -357,11 +366,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI4" type="CharacterBody2D" parent="AI"]
+[node name="AI4" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-109.999954, 1216)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI4"]
 position = Vector2(16, 16)
@@ -372,11 +384,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI5" type="CharacterBody2D" parent="AI"]
+[node name="AI5" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-311.99997, 978)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI5"]
 position = Vector2(16, 16)
@@ -387,11 +402,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI6" type="CharacterBody2D" parent="AI"]
+[node name="AI6" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(144.00005, 988)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI6"]
 position = Vector2(16, 16)
@@ -403,11 +421,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI7" type="CharacterBody2D" parent="AI"]
+[node name="AI7" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-27.999985, 314)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI7"]
 position = Vector2(16, 16)
@@ -418,11 +439,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI8" type="CharacterBody2D" parent="AI"]
+[node name="AI8" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-85.99997, 666)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI8"]
 position = Vector2(16, 16)
@@ -433,11 +457,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI9" type="CharacterBody2D" parent="AI"]
+[node name="AI9" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(180, 506.00003)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI9"]
 position = Vector2(16, 16)
@@ -448,11 +475,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI10" type="CharacterBody2D" parent="AI"]
+[node name="AI10" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-231.99998, 350.00003)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI10"]
 position = Vector2(16, 16)
@@ -463,11 +493,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI11" type="CharacterBody2D" parent="AI"]
+[node name="AI11" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-166, 83.99997)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI11"]
 position = Vector2(16, 16)
@@ -478,11 +511,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI12" type="CharacterBody2D" parent="AI"]
+[node name="AI12" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(52, 138)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI12"]
 position = Vector2(16, 16)
@@ -493,11 +529,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI14" type="CharacterBody2D" parent="AI"]
+[node name="AI14" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(200.00003, 326)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI14"]
 position = Vector2(16, 16)
@@ -508,11 +547,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI15" type="CharacterBody2D" parent="AI"]
+[node name="AI15" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-1.9999847, 474.00006)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI15"]
 position = Vector2(16, 16)
@@ -523,11 +565,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI16" type="CharacterBody2D" parent="AI"]
+[node name="AI16" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-239.99998, 516)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI16"]
 position = Vector2(16, 16)
@@ -538,11 +583,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI17" type="CharacterBody2D" parent="AI"]
+[node name="AI17" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-161.99997, 912)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI17"]
 position = Vector2(16, 16)
@@ -554,11 +602,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI18" type="CharacterBody2D" parent="AI"]
+[node name="AI18" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-42.00006, -123.99997)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI18"]
 position = Vector2(16, 16)
@@ -569,11 +620,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI19" type="CharacterBody2D" parent="AI"]
+[node name="AI19" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(-358.00003, 142.00006)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI19"]
 position = Vector2(16, 16)
@@ -584,11 +638,14 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="AI13" type="CharacterBody2D" parent="AI"]
+[node name="AI13" type="CharacterBody2D" parent="AI" groups=["enemies"]]
 position = Vector2(155.99997, -35.999985)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_r0du0")
+speed = null
+move_time = null
+turn_speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="AI/AI13"]
 position = Vector2(16, 16)
@@ -598,8 +655,5 @@ texture = ExtResource("1_xe0hs")
 rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
-
-[node name="Projectiles" type="Node2D" parent="."]
-position = Vector2(0, -16)
 
 [connection signal="laser" from="MC" to="." method="_on_mc_laser"]
