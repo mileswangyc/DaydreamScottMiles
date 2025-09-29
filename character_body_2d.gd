@@ -94,7 +94,7 @@ func _on_gun_pickup_body_entered(body: Node2D) -> void:
 		
 		$"../Pickups/GunPickup".queue_free()
 		Input.action_press("1")
-		SharedVar.bullet += 5
+		SharedVar.bullet += 8
 		gunlock = true
 
 
