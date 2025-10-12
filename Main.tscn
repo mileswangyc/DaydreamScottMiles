@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
-[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
+[ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
 [ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
 [ext_resource type="AudioStream" uid="uid://nlukfnlxxqgl" path="res://Assets/39. REDLINE.mp3" id="4_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
-[ext_resource type="Script" path="res://far_audio.gd" id="5_sqvbp"]
+[ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
@@ -17,12 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
 [ext_resource type="Texture2D" uid="uid://kme0e7uf4b2r" path="res://Assets/Punching_Final.png" id="9_5tuhn"]
-[ext_resource type="Script" path="res://camera_2d.gd" id="9_sqvbp"]
-[ext_resource type="Script" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" uid="uid://c5tksic45opw" path="res://camera_2d.gd" id="9_sqvbp"]
+[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bqg44jvnn5r7t" path="res://canvas_layer.gd" id="11_kjvhd"]
-[ext_resource type="Script" path="res://gren_3.gd" id="11_sc1dx"]
-[ext_resource type="Script" path="res://boom_3.gd" id="13_kjvhd"]
-[ext_resource type="Script" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
@@ -187,7 +187,7 @@ animations = [{
 font_size = 136
 
 [sub_resource type="LabelSettings" id="LabelSettings_03owx"]
-font_size = 45
+font_size = 90
 
 [sub_resource type="LabelSettings" id="LabelSettings_kjvhd"]
 font_size = 96
@@ -233,7 +233,6 @@ volume_db = 1.0
 autoplay = true
 max_distance = 3000.0
 attenuation = 2.0000007
-panning_strength = 1.8
 parameters/looping = true
 script = ExtResource("3_hhcpw")
 
@@ -244,7 +243,6 @@ volume_db = 1.0
 autoplay = true
 max_distance = 3000.0
 attenuation = 2.0
-panning_strength = 1.8
 parameters/looping = true
 script = ExtResource("5_sqvbp")
 
@@ -1487,26 +1485,27 @@ polygon = PackedVector2Array(519.99976, -4272, -792, -5172, -1702.0005, -6618, -
 script = ExtResource("11_kjvhd")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = 2.0
-offset_top = -31.000004
-offset_right = 42.0
-offset_bottom = 20.682606
+offset_left = -302.99997
+offset_top = -94.99999
+offset_right = -262.99997
+offset_bottom = -43.317383
 scale = Vector2(15.453206, 2.8247113)
 color = Color(0, 0, 0, 0.5019608)
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-offset_left = -5.0
-offset_top = 950.99994
-offset_right = 35.0
-offset_bottom = 990.99994
+offset_left = -406.00003
+offset_top = 514.0
+offset_right = -366.00003
+offset_bottom = 554.0
 scale = Vector2(20.462612, 45.168087)
 color = Color(0, 0, 0, 0.21568628)
 
 [node name="gren3" type="Label" parent="CanvasLayer"]
-offset_left = 412.0
-offset_top = 1009.0
-offset_right = 547.0
-offset_bottom = 1332.0
+offset_left = 214.0
+offset_top = 547.0
+offset_right = 349.0
+offset_bottom = 870.0
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 text = "0"
@@ -1519,6 +1518,7 @@ offset_left = -107.0
 offset_top = -26.0
 offset_right = 28.0
 offset_bottom = 297.0
+scale = Vector2(0.5, 0.5)
 text = "2 Key"
 label_settings = SubResource("LabelSettings_03owx")
 
@@ -1528,10 +1528,11 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("8_03owx")
 
 [node name="boom3" type="Label" parent="CanvasLayer"]
-offset_left = 686.0
-offset_top = 1005.0
-offset_right = 821.0
-offset_bottom = 1328.0
+offset_left = 354.0
+offset_top = 543.0
+offset_right = 489.0
+offset_bottom = 866.0
+scale = Vector2(0.5, 0.5)
 text = "0"
 label_settings = SubResource("LabelSettings_trn2v")
 script = ExtResource("13_kjvhd")
@@ -1548,14 +1549,16 @@ offset_left = -108.0
 offset_top = -19.0
 offset_right = 27.0
 offset_bottom = 304.0
+scale = Vector2(0.5, 0.5)
 text = "3 Key"
 label_settings = SubResource("LabelSettings_03owx")
 
 [node name="bull2" type="Label" parent="CanvasLayer"]
-offset_left = 160.0
-offset_top = 1003.0
-offset_right = 295.0
-offset_bottom = 1326.0
+offset_left = 78.0
+offset_top = 548.0
+offset_right = 213.0
+offset_bottom = 871.0
+scale = Vector2(0.5, 0.5)
 text = "0"
 label_settings = SubResource("LabelSettings_trn2v")
 script = ExtResource("15_5tuhn")
@@ -1570,21 +1573,23 @@ layout_mode = 0
 offset_left = -135.0
 offset_top = -17.0
 offset_bottom = 306.0
+scale = Vector2(0.5, 0.5)
 text = "1 Key"
 label_settings = SubResource("LabelSettings_03owx")
 
 [node name="Timer" type="Timer" parent="CanvasLayer"]
 
 [node name="TV\'s Left" type="Label" parent="CanvasLayer"]
-offset_left = 431.0
-offset_top = -7.0
-offset_right = 2111.0
-offset_bottom = 1330.0
+offset_left = 230.0
+offset_top = -10.0
+offset_right = 1910.0
+offset_bottom = 1327.0
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0.10747976, 0.10747973, 0.10747973, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/line_spacing = 728
 theme_override_constants/outline_size = 155
-text = "2
+text = "100
 "
 label_settings = SubResource("LabelSettings_kjvhd")
 
@@ -1593,6 +1598,7 @@ offset_left = 15.0
 offset_top = -11.0
 offset_right = 404.0
 offset_bottom = 121.0
+scale = Vector2(0.5, 0.5)
 text = "TV's Left"
 label_settings = SubResource("LabelSettings_2gh4u")
 
@@ -1616,7 +1622,7 @@ position = Vector2(958.17255, 528.59094)
 scale = Vector2(1.2923687, 1.4216188)
 texture = ExtResource("18_3b0ty")
 
-[node name="Label" type="Label" parent="CanvasLayer/Win"]
+[node name="Start" type="Label" parent="CanvasLayer/Win"]
 offset_left = -42.69105
 offset_top = -276.15768
 offset_right = 721.30896
@@ -1709,7 +1715,7 @@ texture = ExtResource("18_5tuhn")
 
 [node name="Other" type="Node2D" parent="."]
 
-[node name="Label" type="Label" parent="Other"]
+[node name="BFIB" type="Label" parent="Other"]
 offset_left = 734.00024
 offset_top = 2354.0
 offset_right = 3719.0002
