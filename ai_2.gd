@@ -43,8 +43,7 @@ func die():
 	get_parent().add_child(particles)
 	particles.global_position = global_position
 	particles.emitting = true
-	
-	var death_sound = get_node("/root/Root/AI/Death_Sound")
-	death_sound.play()
+	$"../Death_Sound".death_sound
+
 	
 	queue_free()
