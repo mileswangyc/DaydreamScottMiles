@@ -65,5 +65,5 @@ func _on_area_2d_4_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_5_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemies"):
-		body.y1 = -0.8
-		body.y2 = -1
+		body.y1 = -1.73
+		body.y2 = -5.67
