@@ -13,7 +13,7 @@ func _process(delta):
 		position += fixeddirection * speed * delta
 	if type == 2:
 		position -= fixeddirection * speed * delta
-		
+	#Add boomerang sound
 	
 
 func _on_body_entered(body):
