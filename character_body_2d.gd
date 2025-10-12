@@ -4,6 +4,7 @@ signal laser(pos, direction)
 signal grenade(pos, direction)
 signal boom(pos, direction)
 
+
 var gunlock = false
 var grenadelock = false
 var boomlock = false
@@ -13,6 +14,7 @@ var choice = 0
 var carmode = false
 @onready var cam = $Camera2D
 @onready var new_parent = $"../Car"
+@onready var line = $Line2D
 
 func _physics_process(delta: float) -> void:
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")
@@ -20,9 +22,8 @@ func _physics_process(delta: float) -> void:
 	var mousepos = get_global_mouse_position()
 	rotation = (global_position-mousepos).angle()
 	var player_direction = (global_position-mousepos).normalized()
-	
-	
-	
+	var direction = (mousepos-global_position).normalized()
+
 	if Input.is_action_just_pressed("1") and gunlock == true:
 		choice = 1
 		$"../CanvasLayer/bull2".modulate = Color(0.968, 0.8, 0.452, 1.0)
@@ -31,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Normal")
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=1
+		line.clear_points()
 	if Input.is_action_just_pressed("2") and grenadelock == true:
 		choice = 2
 		$"../CanvasLayer/gren3".modulate = Color(0.968, 0.8, 0.452, 1.0)
@@ -39,6 +41,9 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Normal")
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=2
+		line.clear_points()
+		line.add_point(Vector2.ZERO)  
+		line.add_point(to_local(mousepos).normalized() * 600)	
 	if Input.is_action_just_pressed("3") and boomlock == true:
 		choice = 3
 		$"../CanvasLayer/boom3".modulate = Color(0.968, 0.8, 0.452, 1.0)
@@ -47,7 +52,9 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Normal")
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.frame=3
-
+		line.clear_points()
+		line.add_point(Vector2.ZERO)  
+		line.add_point(to_local(mousepos).normalized() * 2000)
 	if Input.is_action_just_pressed("shoot") and choice == 0 and cool == true:
 		cool = false
 		$AnimatedSprite2D.visible = false

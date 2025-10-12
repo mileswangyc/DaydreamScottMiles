@@ -23,7 +23,7 @@ func _on_mc_grenade(pos: Variant, direction: Variant) -> void:
 	var angle_degrees = rad_to_deg(direction.angle()) +180
 	var angle_radians = deg_to_rad(angle_degrees)
 	grenade.fixeddirection = Vector2(cos(angle_radians), sin(angle_radians))
-	grenade.linear_velocity = grenade.fixeddirection * grenade.speed
+	grenade.linear_velocity = grenade.fixeddirection * grenade.speed * 0.7
 	grenade.angular_velocity = -2.9
 
 

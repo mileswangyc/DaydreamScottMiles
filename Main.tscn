@@ -1,10 +1,15 @@
-[gd_scene load_steps=64 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=70 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
+[ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
+[ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
+[ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
+[ext_resource type="AudioStream" uid="uid://nlukfnlxxqgl" path="res://Assets/39. REDLINE.mp3" id="4_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
+[ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="PackedScene" uid="uid://cbqd8k2e5cjpv" path="res://car.tscn" id="6_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
@@ -187,6 +192,10 @@ font_size = 96
 [sub_resource type="LabelSettings" id="LabelSettings_2gh4u"]
 font_size = 96
 
+[sub_resource type="LabelSettings" id="LabelSettings_bg4s2"]
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_3b0ty"]
 line_spacing = -67.63
 font_size = 130
@@ -204,6 +213,28 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_fos0i")
 
 [node name="Map" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map"]
+position = Vector2(1417.9999, -2896)
+stream = ExtResource("4_xrxkg")
+volume_db = 1.0
+autoplay = true
+max_distance = 4000.0
+attenuation = 2.0705297
+panning_strength = 1.6
+parameters/looping = true
+script = ExtResource("3_hhcpw")
+
+[node name="FarAudio" type="AudioStreamPlayer2D" parent="Map"]
+position = Vector2(2355.9995, -12520)
+stream = ExtResource("4_sqvbp")
+volume_db = 1.0
+autoplay = true
+max_distance = 4000.0
+attenuation = 2.0705297
+panning_strength = 1.6
+parameters/looping = true
+script = ExtResource("5_sqvbp")
 
 [node name="Map2" type="Sprite2D" parent="Map"]
 position = Vector2(2565.9995, -9650)
@@ -1320,6 +1351,9 @@ position = Vector2(248.00005, 1482)
 rotation = 1.5707964
 script = ExtResource("2_3ng1f")
 
+[node name="Line2D" type="Line2D" parent="MC"]
+default_color = Color(0, 0, 0, 0.38431373)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MC"]
 position = Vector2(4.000001, 14)
 rotation = 1.5707964
@@ -1352,25 +1386,12 @@ polygon = PackedVector2Array(32, 86, 66, 178, -8, 178, -2, 90)
 
 [node name="Timer" type="Timer" parent="MC"]
 
-[node name="AI2" type="Node2D" parent="MC"]
-position = Vector2(-4428, -355.9995)
-rotation = -1.4294139
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="AI11" parent="MC/AI2" instance=ExtResource("5_fos0i")]
-position = Vector2(210.00006, 902)
-
-[node name="AItotal" type="Node2D" parent="MC/AI2"]
-position = Vector2(-182.84656, 3001.7168)
-rotation = -0.14138249
-scale = Vector2(0.99999994, 0.99999994)
-
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas/Area2D"]
-position = Vector2(-14, 56.000023)
+position = Vector2(-9.536743e-07, 32.000023)
 polygon = PackedVector2Array(-91.999756, 2248, 704.00024, 2256, 718, -520, -86, -662)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Areas/Area2D"]
@@ -1563,17 +1584,33 @@ offset_bottom = 121.0
 text = "TV's Left"
 label_settings = SubResource("LabelSettings_2gh4u")
 
+[node name="Lose" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(955.5, 526)
+scale = Vector2(1.0206704, 1.1409091)
+texture = ExtResource("19_bg4s2")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Lose"]
+offset_left = -51.43683
+offset_top = -341.8327
+offset_right = 712.5632
+offset_bottom = -173.01102
+text = "Reload Page to Restart"
+label_settings = SubResource("LabelSettings_bg4s2")
+
 [node name="Win" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(958.17255, 528.59094)
 scale = Vector2(1.2923687, 1.4216188)
 texture = ExtResource("18_3b0ty")
 
-[node name="Lose" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(955.5, 526)
-scale = Vector2(1.0206704, 1.1409091)
-texture = ExtResource("19_bg4s2")
+[node name="Label" type="Label" parent="CanvasLayer/Win"]
+offset_left = -42.69105
+offset_top = -276.15768
+offset_right = 721.30896
+offset_bottom = -107.336
+text = "Reload Page to Restart"
+label_settings = SubResource("LabelSettings_bg4s2")
 
 [node name="Pickups" type="Node2D" parent="."]
 
@@ -1676,6 +1713,16 @@ offset_bottom = 2905.0002
 rotation = -1.572604
 text = "Left Click to Attack     WASD to Move"
 label_settings = SubResource("LabelSettings_devvj")
+
+[node name="26586" type="Sprite2D" parent="."]
+position = Vector2(1396, -2900)
+rotation = 2.2048743
+texture = ExtResource("4_bg4s2")
+
+[node name="26587" type="Sprite2D" parent="."]
+position = Vector2(2437.9988, -12556)
+rotation = -0.45584714
+texture = ExtResource("4_bg4s2")
 
 [connection signal="boom" from="MC" to="." method="_on_mc_boom"]
 [connection signal="grenade" from="MC" to="." method="_on_mc_grenade"]

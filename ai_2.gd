@@ -38,11 +38,9 @@ func hitenemy():
 	die()
 
 func die():
-	# Play the death animation
-	$AnimatedSprite2D.play("death")  # Change "death" to your animation name
-	
-	# Wait for the animation to finish
-	await $AnimatedSprite2D.animation_finished
-	
-	# Then remove the enemy
+	var particles = $DeathPart
+	remove_child(particles)
+	get_parent().add_child(particles)
+	particles.global_position = global_position
+	particles.emitting = true
 	queue_free()
