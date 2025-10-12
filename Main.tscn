@@ -1,28 +1,29 @@
-[gd_scene load_steps=76 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=77 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
-[ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
 [ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
 [ext_resource type="AudioStream" uid="uid://nlukfnlxxqgl" path="res://Assets/39. REDLINE.mp3" id="4_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
-[ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
+[ext_resource type="Script" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
+[ext_resource type="AudioStream" uid="uid://bssk3y8evtc5n" path="res://Goblin Death.wav" id="7_5mvff"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
 [ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
 [ext_resource type="Texture2D" uid="uid://kme0e7uf4b2r" path="res://Assets/Punching_Final.png" id="9_5tuhn"]
-[ext_resource type="Script" uid="uid://c5tksic45opw" path="res://camera_2d.gd" id="9_sqvbp"]
-[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="9_sqvbp"]
+[ext_resource type="Script" path="res://pickupanimation.gd" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bqg44jvnn5r7t" path="res://canvas_layer.gd" id="11_kjvhd"]
-[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
-[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
-[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Script" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
@@ -493,6 +494,10 @@ position = Vector2(0, -16)
 
 [node name="AI" type="Node2D" parent="."]
 position = Vector2(19.999996, -150)
+
+[node name="Death_Sound" type="AudioStreamPlayer2D" parent="AI"]
+stream = ExtResource("7_5mvff")
+volume_db = 24.0
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(220.00009, 2360)
@@ -1582,7 +1587,7 @@ theme_override_colors/font_color = Color(0.10747976, 0.10747973, 0.10747973, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
 theme_override_constants/line_spacing = 728
 theme_override_constants/outline_size = 155
-text = "100"
+text = "200"
 label_settings = SubResource("LabelSettings_kjvhd")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
