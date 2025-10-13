@@ -1,29 +1,28 @@
-[gd_scene load_steps=77 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=76 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
-[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
+[ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
 [ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
 [ext_resource type="AudioStream" uid="uid://nlukfnlxxqgl" path="res://Assets/39. REDLINE.mp3" id="4_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
-[ext_resource type="Script" path="res://far_audio.gd" id="5_sqvbp"]
+[ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
-[ext_resource type="AudioStream" uid="uid://bssk3y8evtc5n" path="res://Goblin Death.wav" id="7_5mvff"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
 [ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
 [ext_resource type="Texture2D" uid="uid://kme0e7uf4b2r" path="res://Assets/Punching_Final.png" id="9_5tuhn"]
-[ext_resource type="Script" path="res://camera_2d.gd" id="9_sqvbp"]
-[ext_resource type="Script" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" uid="uid://c5tksic45opw" path="res://camera_2d.gd" id="9_sqvbp"]
+[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bqg44jvnn5r7t" path="res://canvas_layer.gd" id="11_kjvhd"]
-[ext_resource type="Script" path="res://gren_3.gd" id="11_sc1dx"]
-[ext_resource type="Script" path="res://boom_3.gd" id="13_kjvhd"]
-[ext_resource type="Script" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
@@ -201,7 +200,7 @@ font_size = 60
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3b0ty"]
-line_spacing = -67.63
+line_spacing = -27.365
 font_size = 130
 font_color = Color(0, 0, 0, 1)
 
@@ -230,20 +229,18 @@ script = ExtResource("1_fos0i")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map"]
 position = Vector2(1417.9999, -2896)
 stream = ExtResource("4_xrxkg")
-volume_db = 1.0
 autoplay = true
 max_distance = 3000.0
-attenuation = 2.0000007
+panning_strength = 2.01
 parameters/looping = true
 script = ExtResource("3_hhcpw")
 
 [node name="FarAudio" type="AudioStreamPlayer2D" parent="Map"]
 position = Vector2(2355.9995, -12520)
 stream = ExtResource("4_sqvbp")
-volume_db = 1.0
 autoplay = true
 max_distance = 3000.0
-attenuation = 2.0
+panning_strength = 2.01
 parameters/looping = true
 script = ExtResource("5_sqvbp")
 
@@ -494,7 +491,6 @@ position = Vector2(0, -16)
 position = Vector2(19.999996, -150)
 
 [node name="Death_Sound" type="AudioStreamPlayer2D" parent="AI"]
-stream = ExtResource("7_5mvff")
 max_distance = 100000000.0
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
@@ -1375,11 +1371,12 @@ rotation = 1.5707964
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_ss07l")
 
-[node name="Camera2D" type="Camera2D" parent="MC"]
+[node name="Camera2D" type="Camera2D" parent="MC" node_paths=PackedStringArray("color_rect")]
 position = Vector2(4.7683716e-07, 0)
 scale = Vector2(2, 2)
 zoom = Vector2(0.4, 0.4)
 script = ExtResource("9_sqvbp")
+color_rect = NodePath("../../CanvasLayer/ColorRectRED")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MC"]
 modulate = Color(0.61960787, 0.53333336, 1, 1)
@@ -1633,6 +1630,11 @@ offset_bottom = -107.336
 text = "Reload Page to Restart"
 label_settings = SubResource("LabelSettings_bg4s2")
 
+[node name="ColorRectRED" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1224.0
+offset_bottom = 723.0
+color = Color(1, 0.4117647, 0.42745098, 0)
+
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="GunPickup" type="Area2D" parent="Pickups"]
@@ -1725,7 +1727,7 @@ offset_right = 3719.0002
 offset_bottom = 2771.0
 rotation = -1.572604
 text = "Black Friday is brutal, and you are the predator. 
-Sacrifices must be made."
+Sacrifices must be made. It is 7AM"
 label_settings = SubResource("LabelSettings_3b0ty")
 
 [node name="Label2" type="Label" parent="Other"]

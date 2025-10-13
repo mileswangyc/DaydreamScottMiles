@@ -1,48 +1,37 @@
 extends Camera2D
 
-@export var shake_strength := 0
-@export var smoothness := 8     
-@export var sensitivity := 0.1
-@export var shake_update_rate := 0.1 
+@export var max_opacity := 0.5
+@export var color_rect: ColorRect
+@export var bass_threshold := 0.0 
+@export var bass_multiplier := 2.0  
 
 var speakers: Array[AudioStreamPlayer2D] = []
-var original_position: Vector2
-var current_offset := Vector2.ZERO
-var target_offset := Vector2.ZERO
-var shake_timer := 0.0
-var current_intensity := 0.0
+var spectrum: AudioEffectSpectrumAnalyzerInstance
 
 func _ready():
-	original_position = position
-
 	speakers = [
 		get_node("../../Map/AudioStreamPlayer2D"),
 		get_node("../../Map/FarAudio")
 	]
+	
+	if color_rect:
+		color_rect.color = Color(1.0, 0.0, 0.0, 0.0)
+	
+	var idx = AudioServer.get_bus_index("Master")
+	var effect = AudioEffectSpectrumAnalyzer.new()
+	AudioServer.add_bus_effect(idx, effect)
+	spectrum = AudioServer.get_bus_effect_instance(idx, 0)
 
 func _process(delta):
-	var total_volume = 0.0
-
 	
-	for speaker in speakers:
-		if speaker and speaker.playing:
-			var dist = global_position.distance_to(speaker.global_position)
-			var loudness = clamp(1.0 - dist / 4000.0, 0.0, 1.0)
-			total_volume += loudness
-
+	var bass_energy = 0.0
+	var freq_range = [20.0, 60.0, 100.0, 150.0, 200.0, 250.0]
 	
-	var target_intensity = max(total_volume - sensitivity, 0.0)
-	current_intensity = lerp(current_intensity, target_intensity, delta * smoothness)
-
+	for freq in freq_range:
+		var magnitude = spectrum.get_magnitude_for_frequency_range(freq, freq + 20.0)
+		bass_energy += magnitude.length()
 	
-	shake_timer -= delta
-	if shake_timer <= 0.0:
-		shake_timer = shake_update_rate
-		target_offset = Vector2(
-			randf_range(-shake_strength, shake_strength) * current_intensity,
-			randf_range(-shake_strength, shake_strength) * current_intensity
-		)
-
+	bass_energy = (bass_energy / freq_range.size()) * bass_multiplier
+	bass_energy = clamp(bass_energy - bass_threshold, 0.0, 1.0)
 	
-	current_offset = current_offset.lerp(target_offset, delta * smoothness)
-	position = original_position + current_offset
+	color_rect.color.a = bass_energy * max_opacity
