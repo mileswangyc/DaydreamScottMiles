@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 		$Lose.visible = true
 
 func goagain():
-	$Timer.start(randf_range(0.3,0.5))
+	$Timer.start(randf_range(0.3,0.7))
 	 
 
 func _on_timer_timeout() -> void:
