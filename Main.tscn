@@ -207,7 +207,7 @@ font_size = 60
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3b0ty"]
-line_spacing = -27.365
+line_spacing = -81.09
 font_size = 130
 font_color = Color(0, 0, 0, 1)
 
