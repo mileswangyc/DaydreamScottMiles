@@ -93,6 +93,7 @@ one_shot = true
 
 [node name="Boomerang" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_yvxa8")
+volume_db = 6.0
 max_distance = 1000000.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

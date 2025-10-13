@@ -74,12 +74,12 @@ func _physics_process(delta: float) -> void:
 		if SharedVar.bullet > 0:
 			laser.emit(position, player_direction)
 			SharedVar.bullet -= 1
-		
+			$Bullet.play()
 	if Input.is_action_just_pressed("shoot") and choice == 2:
 		if SharedVar.grenades > 0:
 			grenade.emit(position, player_direction)
 			SharedVar.grenades -= 1
-			$Timer2.start(1.18)
+			$Timer2.start(1.17)
 		
 	if Input.is_action_just_pressed("shoot") and choice == 3:
 		if SharedVar.boom > 0:
