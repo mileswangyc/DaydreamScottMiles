@@ -21,6 +21,7 @@ script = ExtResource("2_24g56")
 shape = SubResource("CircleShape2D_gju2f")
 
 [node name="GrenadeFinal" type="Sprite2D" parent="."]
+modulate = Color(0.39688927, 0.39688927, 0.39688924, 1)
 position = Vector2(0, -10)
 texture = ExtResource("3_ga5sg")
 
