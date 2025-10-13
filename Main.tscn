@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=77 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
 [ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
+[ext_resource type="AudioStream" uid="uid://b70cm8lx8urcr" path="res://;sounds/wine-cork-pop-352295.mp3" id="7_5mvff"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
 [ext_resource type="Texture2D" uid="uid://5ydcule7m5pe" path="res://Assets/bullet.png" id="7_lgr22"]
 [ext_resource type="Texture2D" uid="uid://b43elp28du6cs" path="res://Assets/grenade.png" id="8_03owx"]
@@ -225,6 +226,9 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_fos0i")
 
 [node name="Map" type="Node2D" parent="."]
+
+[node name="Walkingaudio" type="AudioStreamPlayer2D" parent="Map"]
+panning_strength = 0.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map"]
 position = Vector2(1417.9999, -2896)
@@ -491,7 +495,10 @@ position = Vector2(0, -16)
 position = Vector2(19.999996, -150)
 
 [node name="Death_Sound" type="AudioStreamPlayer2D" parent="AI"]
+stream = ExtResource("7_5mvff")
+pitch_scale = 0.8
 max_distance = 100000000.0
+panning_strength = 0.0
 
 [node name="AI" parent="AI" instance=ExtResource("5_fos0i")]
 position = Vector2(220.00009, 2360)
