@@ -7,6 +7,10 @@ signal hitenemy
 func _ready():
 	$Timer.start()
 
+	var gunshot = get_node("AudioStreamPlayer2D")
+	gunshot.play()
+	print("Shot")
+
 func _process(delta):
 	position += fixeddirection * speed * delta
 	rotation = fixeddirection.angle()

@@ -1,31 +1,33 @@
 extends RigidBody2D
 
 @export var speed: int = 3000
-var exploded: bool = false
+var fixeddirection
+var explode 
 
 func _ready():
 	$Timer.start(1)
 
-func _on_Timer_timeout() -> void:
-	explode()
+	
+func _process(delta):
+	pass
 
-func explode():
-	if exploded:
-		return
-	exploded = true
 
-	$AudioStreamPlayer2D.play()
-	print("Grenade exploded!")
 
-	for body in $Area2D.get_overlapping_bodies():
-		if body.is_in_group("player"):
-			continue
-		elif body.is_in_group("enemies"):
-			body.hitenemy()
-		elif "hit" in body:
-			body.hit()
 
-	var duration = $AudioStreamPlayer2D.stream.get_length()
-	await get_tree().create_timer(duration).timeout
 
-	queue_free()
+func _on_timer_timeout() -> void:
+	$Area2D.explode()
+	var grenade_explosion = get_node("AudioStreamPlayer2D")
+	grenade_explosion.play()
+	print("Exploded")
+
+	
+#func _on_body_entered(body):
+	#if explode == true:
+		#if body.is_in_group("player"):
+			#return 
+		#if body.is_in_group("enemies"):
+			#body.hitenemy()
+		#elif "hit" in body:
+			#body.hit()
+		#queue_free()
