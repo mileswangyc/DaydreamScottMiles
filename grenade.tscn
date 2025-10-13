@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://clm6f1akk78cc"]
+[gd_scene load_steps=5 format=3 uid="uid://clm6f1akk78cc"]
 
 [ext_resource type="Script" uid="uid://dlkn3kvca5d7" path="res://grenade.gd" id="1_gju2f"]
 [ext_resource type="Script" uid="uid://c7uigqx80hj68" path="res://area_2d.gd" id="2_24g56"]
 [ext_resource type="Texture2D" uid="uid://ccp1vy2732u4b" path="res://Assets/Grenade_Final.png" id="3_ga5sg"]
-[ext_resource type="AudioStream" uid="uid://bek61mairq7o4" path="res://Assets/Grenade.wav" id="4_o1udh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gju2f"]
 radius = 166.04819
@@ -25,11 +24,6 @@ shape = SubResource("CircleShape2D_gju2f")
 modulate = Color(0.39688927, 0.39688927, 0.39688924, 1)
 position = Vector2(0, -10)
 texture = ExtResource("3_ga5sg")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_o1udh")
-max_distance = 1000000.0
-panning_strength = 0.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

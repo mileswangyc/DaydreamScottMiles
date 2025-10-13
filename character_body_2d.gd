@@ -55,6 +55,7 @@ func _physics_process(delta: float) -> void:
 		line.clear_points()
 		line.add_point(Vector2.ZERO)  
 		line.add_point(to_local(mousepos).normalized() * 2000)
+		
 	if Input.is_action_just_pressed("shoot") and choice == 0 and cool == true:
 		cool = false
 		$AnimatedSprite2D.visible = false
@@ -152,8 +153,6 @@ func _on_tv_pickup_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_2_timeout() -> void:
-	var grenade_explosion = get_node("AudioStreamPlayer2D")
+	var grenade_explosion = get_node("Grenade")
 	grenade_explosion.play()
-	await grenade_explosion.finished()
-	grenade_explosion.stop()
 	print("Exploded")

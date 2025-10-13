@@ -17,9 +17,7 @@ func _process(delta):
 
 func _on_timer_timeout() -> void:
 	$Area2D.explode()
-	var grenade_explosion = get_node("AudioStreamPlayer2D")
-	grenade_explosion.play()
-	print("Exploded")
+
 
 	
 #func _on_body_entered(body):
