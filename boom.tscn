@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbxyc6mlpr4ea" path="res://boom.gd" id="1_37ygf"]
 [ext_resource type="Texture2D" uid="uid://drj1i5gokndov" path="res://Assets/Boomerang animation.png" id="2_37ygf"]
-[ext_resource type="AudioStream" uid="uid://cb66af010m0m" path="res://Assets/Boomerang.mp3" id="3_yvxa8"]
+[ext_resource type="AudioStream" uid="uid://bek61mairq7o4" path="res://Assets/explosion.wav" id="3_yvxa8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvxa8"]
 atlas = ExtResource("2_37ygf")

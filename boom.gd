@@ -7,15 +7,16 @@ var type = 1
 
 func _ready():
 	$Timer.start()
-
+	var boomerang_sound = get_node("Boomerang")
+	boomerang_sound.play()
+	print("Boomerang")
+	
 func _process(delta):
 	if type == 1:
 		position += fixeddirection * speed * delta
 	if type == 2:
 		position -= fixeddirection * speed * delta
-	var boomerang_sound = get_node("Boomerang")
-	boomerang_sound.play()
-	print("Boomerang")
+
 	
 
 func _on_body_entered(body):
