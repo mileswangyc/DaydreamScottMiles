@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=80 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -28,6 +28,7 @@
 [ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
+[ext_resource type="AudioStream" uid="uid://dn72xto0d3wc5" path="res://;sounds/classic-punch-impact-352711.mp3" id="18_gb15f"]
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
 [ext_resource type="Texture2D" uid="uid://bb7qykw7v1123" path="res://Assets/circle.png" id="27_hri7i"]
 [ext_resource type="Texture2D" uid="uid://ber0xspa8mod3" path="res://Assets/wall_lamp.png" id="28_w3rk5"]
@@ -505,7 +506,7 @@ position = Vector2(19.999996, -150)
 [node name="Death_Sound" type="AudioStreamPlayer2D" parent="AI"]
 stream = ExtResource("7_5mvff")
 volume_db = -6.0
-pitch_scale = 0.7
+pitch_scale = 0.8
 max_distance = 100000000.0
 panning_strength = 0.0
 
@@ -1414,6 +1415,13 @@ monitoring = false
 polygon = PackedVector2Array(32, 86, 76, 186, -64, 186, -24, 86)
 
 [node name="Timer" type="Timer" parent="MC"]
+
+[node name="Punch" type="AudioStreamPlayer2D" parent="MC"]
+stream = ExtResource("18_gb15f")
+volume_db = -3.0
+pitch_scale = 1.44
+max_distance = 100000.0
+panning_strength = 0.0
 
 [node name="Areas" type="Node2D" parent="."]
 

@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	rotation = (global_position-mousepos).angle()
 	var player_direction = (global_position-mousepos).normalized()
 	var direction = (mousepos-global_position).normalized()
-
+	
 	if Input.is_action_just_pressed("1") and gunlock == true:
 		choice = 1
 		$"../CanvasLayer/bull2".modulate = Color(0.968, 0.8, 0.452, 1.0)
@@ -63,6 +63,8 @@ func _physics_process(delta: float) -> void:
 		await get_tree().physics_frame 
 		$Area2D.monitoring = false
 		$Timer.start(0.8)
+		$Punch.play()
+		print("shouldplay")
 		
 		
 	if Input.is_action_just_pressed("shoot") and choice == 1:
