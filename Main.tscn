@@ -1,8 +1,10 @@
-[gd_scene load_steps=77 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=79 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
+[ext_resource type="AudioStream" uid="uid://brm3vdbtv0lgg" path="res://;sounds/816019__qubodup__fps-footsteps-loop.wav" id="2_40n85"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
+[ext_resource type="Script" uid="uid://pfd2ixnh32ee" path="res://walkingaudio.gd" id="3_gb15f"]
 [ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
 [ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
@@ -228,11 +230,16 @@ script = ExtResource("1_fos0i")
 [node name="Map" type="Node2D" parent="."]
 
 [node name="Walkingaudio" type="AudioStreamPlayer2D" parent="Map"]
+stream = ExtResource("2_40n85")
+volume_db = -12.0
+max_distance = 100000.0
 panning_strength = 0.0
+script = ExtResource("3_gb15f")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Map"]
 position = Vector2(1417.9999, -2896)
 stream = ExtResource("4_xrxkg")
+volume_db = -3.0
 autoplay = true
 max_distance = 3000.0
 panning_strength = 2.01
@@ -242,6 +249,7 @@ script = ExtResource("3_hhcpw")
 [node name="FarAudio" type="AudioStreamPlayer2D" parent="Map"]
 position = Vector2(2355.9995, -12520)
 stream = ExtResource("4_sqvbp")
+volume_db = -3.0
 autoplay = true
 max_distance = 3000.0
 panning_strength = 2.01
@@ -496,7 +504,8 @@ position = Vector2(19.999996, -150)
 
 [node name="Death_Sound" type="AudioStreamPlayer2D" parent="AI"]
 stream = ExtResource("7_5mvff")
-pitch_scale = 0.8
+volume_db = -6.0
+pitch_scale = 0.7
 max_distance = 100000000.0
 panning_strength = 0.0
 
