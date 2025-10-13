@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=83 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://bek61mairq7o4" path="res://Assets/Grenade.wav" id="19_sph85"]
 [ext_resource type="AudioStream" uid="uid://ccnrvbxouyv4f" path="res://gunshot (1).wav" id="20_o7g6l"]
+[ext_resource type="AudioStream" uid="uid://g40asijkavg4" path="res://;sounds/brass-fanfare-with-timpani-and-winchimes-reverberated-146260.mp3" id="21_vi5kq"]
 [ext_resource type="Texture2D" uid="uid://bb7qykw7v1123" path="res://Assets/circle.png" id="27_hri7i"]
 [ext_resource type="Texture2D" uid="uid://ber0xspa8mod3" path="res://Assets/wall_lamp.png" id="28_w3rk5"]
 [ext_resource type="Texture2D" uid="uid://u1ymlrn5f011" path="res://Assets/circle2.png" id="29_w3rk5"]
@@ -1435,6 +1436,11 @@ panning_strength = 0.0
 [node name="Bullet" type="AudioStreamPlayer2D" parent="MC"]
 stream = ExtResource("20_o7g6l")
 max_distance = 100000.0
+panning_strength = 0.0
+
+[node name="Win" type="AudioStreamPlayer2D" parent="MC"]
+stream = ExtResource("21_vi5kq")
+max_distance = 25345.0
 panning_strength = 0.0
 
 [node name="Areas" type="Node2D" parent="."]

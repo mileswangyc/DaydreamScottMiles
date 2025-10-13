@@ -148,7 +148,9 @@ func _on_car_pickup_body_entered(body: Node2D) -> void:
 
 func _on_tv_pickup_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		$"../CanvasLayer/Win".visible = true
+		if $"TV's Left".text != "0":
+			$"../CanvasLayer/Win".visible = true
+			$Win.play()
 		
 
 
