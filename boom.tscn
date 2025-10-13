@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dh6ygotqri3op"]
+[gd_scene load_steps=14 format=3 uid="uid://dh6ygotqri3op"]
 
 [ext_resource type="Script" uid="uid://bbxyc6mlpr4ea" path="res://boom.gd" id="1_37ygf"]
 [ext_resource type="Texture2D" uid="uid://drj1i5gokndov" path="res://Assets/Boomerang animation.png" id="2_37ygf"]
+[ext_resource type="AudioStream" uid="uid://cb66af010m0m" path="res://Assets/Boomerang.mp3" id="3_yvxa8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvxa8"]
 atlas = ExtResource("2_37ygf")
@@ -89,6 +90,10 @@ one_shot = true
 
 [node name="Timer2" type="Timer" parent="."]
 one_shot = true
+
+[node name="Boomerang" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yvxa8")
+max_distance = 1000000.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
