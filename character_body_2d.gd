@@ -73,12 +73,12 @@ func _physics_process(delta: float) -> void:
 		if SharedVar.bullet > 0:
 			laser.emit(position, player_direction)
 			SharedVar.bullet -= 1
-			
+		
 	if Input.is_action_just_pressed("shoot") and choice == 2:
 		if SharedVar.grenades > 0:
 			grenade.emit(position, player_direction)
 			SharedVar.grenades -= 1
-			
+			$Timer2.start(2)
 		
 	if Input.is_action_just_pressed("shoot") and choice == 3:
 		if SharedVar.boom > 0:
@@ -149,3 +149,11 @@ func _on_tv_pickup_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		$"../CanvasLayer/Win".visible = true
 		
+
+
+func _on_timer_2_timeout() -> void:
+	var grenade_explosion = get_node("AudioStreamPlayer2D")
+	grenade_explosion.play()
+	await grenade_explosion.finished()
+	grenade_explosion.stop()
+	print("Exploded")

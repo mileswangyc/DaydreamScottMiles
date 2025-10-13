@@ -1,17 +1,17 @@
-[gd_scene load_steps=80 format=3 uid="uid://bujolfmlwwxtr"]
+[gd_scene load_steps=81 format=3 uid="uid://bujolfmlwwxtr"]
 
 [ext_resource type="Script" uid="uid://donxqwnugnhmw" path="res://main.gd" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b6in6nm7uigjs" path="res://character_body_2d.gd" id="2_3ng1f"]
 [ext_resource type="AudioStream" uid="uid://brm3vdbtv0lgg" path="res://;sounds/816019__qubodup__fps-footsteps-loop.wav" id="2_40n85"]
 [ext_resource type="Texture2D" uid="uid://brd68b4rx7hja" path="res://Assets/Actual_Final_Map.png" id="2_sc1dx"]
-[ext_resource type="Script" uid="uid://pfd2ixnh32ee" path="res://walkingaudio.gd" id="3_gb15f"]
-[ext_resource type="Script" uid="uid://cos8ljjx35850" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
+[ext_resource type="Script" path="res://walkingaudio.gd" id="3_gb15f"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="3_hhcpw"]
 [ext_resource type="Texture2D" uid="uid://c77wq3pqp7mar" path="res://26586.png" id="4_bg4s2"]
 [ext_resource type="AudioStream" uid="uid://v8akfqoohdx3" path="res://Assets/01. Yellow Line.mp3" id="4_sqvbp"]
 [ext_resource type="AudioStream" uid="uid://nlukfnlxxqgl" path="res://Assets/39. REDLINE.mp3" id="4_xrxkg"]
 [ext_resource type="PackedScene" uid="uid://jaafnhi6robe" path="res://ai.tscn" id="5_fos0i"]
 [ext_resource type="Texture2D" uid="uid://c5n7o06a7fgw8" path="res://Assets/Normal_Player.png" id="5_sc1dx"]
-[ext_resource type="Script" uid="uid://bia0hhq2gqfsx" path="res://far_audio.gd" id="5_sqvbp"]
+[ext_resource type="Script" path="res://far_audio.gd" id="5_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://bvey8u3k56ec4" path="res://Assets/Player_Gun.png" id="6_c2ibq"]
 [ext_resource type="AudioStream" uid="uid://b70cm8lx8urcr" path="res://;sounds/wine-cork-pop-352295.mp3" id="7_5mvff"]
 [ext_resource type="Texture2D" uid="uid://b7t7h1ndrqspi" path="res://Assets/Player_Grenade.png" id="7_j4qnp"]
@@ -20,16 +20,17 @@
 [ext_resource type="Texture2D" uid="uid://dg5rucd32ua2f" path="res://Assets/Player_Boomerang.png" id="8_fpfj3"]
 [ext_resource type="Texture2D" uid="uid://bj07dekugkywt" path="res://Assets/loccssf.png" id="9_03owx"]
 [ext_resource type="Texture2D" uid="uid://kme0e7uf4b2r" path="res://Assets/Punching_Final.png" id="9_5tuhn"]
-[ext_resource type="Script" uid="uid://c5tksic45opw" path="res://camera_2d.gd" id="9_sqvbp"]
-[ext_resource type="Script" uid="uid://d2i5o1uaj120l" path="res://pickupanimation.gd" id="10_wkp8b"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="9_sqvbp"]
+[ext_resource type="Script" path="res://pickupanimation.gd" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bqg44jvnn5r7t" path="res://canvas_layer.gd" id="11_kjvhd"]
-[ext_resource type="Script" uid="uid://nn81g5ssi12i" path="res://gren_3.gd" id="11_sc1dx"]
-[ext_resource type="Script" uid="uid://b7ij763yrug8q" path="res://boom_3.gd" id="13_kjvhd"]
-[ext_resource type="Script" uid="uid://d215vejtjuthq" path="res://bull_2.gd" id="15_5tuhn"]
+[ext_resource type="Script" path="res://gren_3.gd" id="11_sc1dx"]
+[ext_resource type="Script" path="res://boom_3.gd" id="13_kjvhd"]
+[ext_resource type="Script" path="res://bull_2.gd" id="15_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://ba61myd2badio" path="res://Win_Screen.webp" id="18_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://dn0lx0paigs2w" path="res://TV_Final.png" id="18_5tuhn"]
 [ext_resource type="AudioStream" uid="uid://dn72xto0d3wc5" path="res://;sounds/classic-punch-impact-352711.mp3" id="18_gb15f"]
 [ext_resource type="Texture2D" uid="uid://djeunuuhj37n7" path="res://Lose_Screen.png" id="19_bg4s2"]
+[ext_resource type="AudioStream" uid="uid://bek61mairq7o4" path="res://Assets/Grenade.wav" id="19_sph85"]
 [ext_resource type="Texture2D" uid="uid://bb7qykw7v1123" path="res://Assets/circle.png" id="27_hri7i"]
 [ext_resource type="Texture2D" uid="uid://ber0xspa8mod3" path="res://Assets/wall_lamp.png" id="28_w3rk5"]
 [ext_resource type="Texture2D" uid="uid://u1ymlrn5f011" path="res://Assets/circle2.png" id="29_w3rk5"]
@@ -1423,6 +1424,13 @@ pitch_scale = 1.44
 max_distance = 100000.0
 panning_strength = 0.0
 
+[node name="Timer2" type="Timer" parent="MC"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MC"]
+stream = ExtResource("19_sph85")
+max_distance = 1000000.0
+panning_strength = 0.0
+
 [node name="Areas" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Areas" groups=["Angels"]]
@@ -2229,6 +2237,7 @@ blend_mode = 1
 [connection signal="laser" from="MC" to="." method="_on_mc_laser"]
 [connection signal="body_entered" from="MC/Area2D" to="MC" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="MC/Timer" to="MC" method="_on_timer_timeout"]
+[connection signal="timeout" from="MC/Timer2" to="MC" method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Areas/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Areas/Area2D3" to="." method="_on_area_2d_3_body_entered"]
