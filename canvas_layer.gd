@@ -12,10 +12,11 @@ func goagain():
 	 
 
 func _on_timer_timeout() -> void:
-	if int($"TV's Left".text) < 0: 
+	if int($"TV's Left".text) > 0: 
 		var current = int($"TV's Left".text)
 		current -= 1
 		$"TV's Left".text =str(current)
 		goagain()
 	else:
 		$"TV's Left".text = "0"
+		print("changed")
